@@ -1,0 +1,1080 @@
+Run 1/1
+Running simulation 'default_scenario'
+4108.599999997416	1	Contact Info Transfer between	f144 p13
+4108.599999997416	4	LER nd LT Info Transfer between	f144 p13
+6616.900000006541	5	Contact Info Transfer between	f146 p25
+6616.900000006541	6	Contact Info Transfer between	f146 p25
+6616.900000006541	7	Contact Info Transfer between	f146 p25
+6616.900000006541	14	LER nd LT Info Transfer between	f146 p25
+6618.900000006548	15	Contact Info Transfer between	f146 p25
+6618.900000006548	16	Contact Info Transfer between	f146 p25
+6618.900000006548	17	Contact Info Transfer between	f146 p25
+6618.900000006548	24	LER nd LT Info Transfer between	f146 p25
+7115.900000008356	25	Contact Info Transfer between	f146 p9
+7115.900000008356	26	Contact Info Transfer between	f146 p9
+7115.900000008356	27	Contact Info Transfer between	f146 p9
+7115.900000008356	28	Contact Info Transfer between	f146 p9
+7115.900000008356	42	LER nd LT Info Transfer between	f146 p9
+7121.900000008378	43	Contact Info Transfer between	f147 p16
+7121.900000008378	44	Contact Info Transfer between	f147 p16
+7121.900000008378	45	Contact Info Transfer between	f147 p16
+7121.900000008378	48	LER nd LT Info Transfer between	f147 p16
+8046.800000011743	49	Contact Info Transfer between	f148 p28
+8046.800000011743	60	LER nd LT Info Transfer between	f148 p28
+8100.400000011938	61	Contact Info Transfer between	f146 w74
+8100.400000011938	62	Contact Info Transfer between	f146 w74
+8100.400000011938	63	Contact Info Transfer between	f146 w74
+8100.400000011938	74	LER nd LT Info Transfer between	f146 w74
+8431.600000013143	75	Contact Info Transfer between	f145 t97
+8431.600000013143	76	Contact Info Transfer between	f145 t97
+8431.600000013143	77	Contact Info Transfer between	f145 t97
+8431.600000013143	78	Contact Info Transfer between	f145 t97
+8431.600000013143	79	Contact Info Transfer between	f145 t97
+8431.600000013143	80	Contact Info Transfer between	f145 t97
+8431.600000013143	81	Contact Info Transfer between	f145 t97
+8431.600000013143	82	Contact Info Transfer between	f145 t97
+8431.600000013143	83	Contact Info Transfer between	f145 t97
+8431.600000013143	84	Contact Info Transfer between	f145 t97
+8431.600000013143	85	Contact Info Transfer between	f145 t97
+8431.600000013143	86	Contact Info Transfer between	f145 t97
+8431.600000013143	87	Contact Info Transfer between	f145 t97
+8431.600000013143	88	Contact Info Transfer between	f145 t97
+8431.600000013143	89	Contact Info Transfer between	f145 t97
+8431.600000013143	90	Contact Info Transfer between	f145 t97
+8431.600000013143	132	LER nd LT Info Transfer between	f145 t97
+8464.300000013262	133	Contact Info Transfer between	f145 t94
+8464.300000013262	134	Contact Info Transfer between	f145 t94
+8464.300000013262	135	Contact Info Transfer between	f145 t94
+8464.300000013262	136	Contact Info Transfer between	f145 t94
+8464.300000013262	137	Contact Info Transfer between	f145 t94
+8464.300000013262	138	Contact Info Transfer between	f145 t94
+8464.300000013262	139	Contact Info Transfer between	f145 t94
+8464.300000013262	140	Contact Info Transfer between	f145 t94
+8464.300000013262	141	Contact Info Transfer between	f145 t94
+8464.300000013262	142	Contact Info Transfer between	f145 t94
+8464.300000013262	143	Contact Info Transfer between	f145 t94
+8464.300000013262	144	Contact Info Transfer between	f145 t94
+8464.300000013262	145	Contact Info Transfer between	f145 t94
+8464.300000013262	146	Contact Info Transfer between	f145 t94
+8464.300000013262	147	Contact Info Transfer between	f145 t94
+8464.300000013262	148	Contact Info Transfer between	f145 t94
+8464.300000013262	196	LER nd LT Info Transfer between	f145 t94
+10116.10000001927	197	Contact Info Transfer between	f144 p4
+10116.10000001927	198	Contact Info Transfer between	f144 p4
+10116.10000001927	206	LER nd LT Info Transfer between	f144 p4
+10116.10000001927	207	Contact Info Transfer between	f144 w58
+10116.10000001927	208	Contact Info Transfer between	f144 w58
+10116.10000001927	216	LER nd LT Info Transfer between	f144 w58
+11252.100000023403	216	M41	Message Info Transfer between	f140 and m_s111
+11252.100000023403	217	MalNode Info Transfer between	f140 m_s111
+11252.100000023403	218	m_s111	MalNode Info Transfer between	f140 m_s111
+11255.300000023415	219	MalNode Info Transfer between	t86 t88
+11255.300000023415	220	MalNode Info Transfer between	t86 t88
+11256.100000023418	221	MalNode Info Transfer between	f147 c54
+11256.80000002342	222	MalNode Info Transfer between	t81 t80
+11256.80000002342	223	MalNode Info Transfer between	t81 t80
+11260.500000023434	224	MalNode Info Transfer between	t82 t80
+11263.200000023444	225	MalNode Info Transfer between	t86 t84
+11265.900000023454	226	MalNode Info Transfer between	t85 t82
+11277.800000023497	227	MalNode Info Transfer between	t98 t97
+11277.800000023497	228	MalNode Info Transfer between	t98 t97
+11278.900000023501	229	MalNode Info Transfer between	t94 t99
+11278.900000023501	230	MalNode Info Transfer between	t94 t99
+11281.20000002351	231	MalNode Info Transfer between	t93 t86
+11283.90000002352	232	MalNode Info Transfer between	t90 t89
+11283.90000002352	233	MalNode Info Transfer between	t90 t89
+11283.90000002352	234	MalNode Info Transfer between	t90 t87
+11286.100000023527	235	MalNode Info Transfer between	t92 t89
+11288.000000023534	251	LER nd LT Info Transfer between	f146 p3
+11288.800000023537	252	MalNode Info Transfer between	c51 t82
+11291.800000023548	253	MalNode Info Transfer between	p3 f146
+11299.400000023576	254	MalNode Info Transfer between	t83 t86
+11300.80000002358	255	MalNode Info Transfer between	t95 t98
+11302.200000023586	256	MalNode Info Transfer between	c37 c50
+11302.200000023586	257	MalNode Info Transfer between	c37 c50
+11335.200000023706	258	MalNode Info Transfer between	c34 f142
+11352.200000023768	259	MalNode Info Transfer between	w76 f147
+11355.80000002378	260	MalNode Info Transfer between	t96 t97
+11366.80000002382	261	MalNode Info Transfer between	c36 p9
+11366.80000002382	262	MalNode Info Transfer between	c36 p9
+11388.900000023901	263	MalNode Info Transfer between	t91 t82
+11404.400000023958	264	MalNode Info Transfer between	c54 m_f128
+11406.500000023965	265	MalNode Info Transfer between	w66 c36
+11414.700000023995	266	MalNode Info Transfer between	c34 c49
+11474.00000002421	267	MalNode Info Transfer between	w66 p17
+11480.400000024234	268	MalNode Info Transfer between	p5 m_f135
+11480.400000024234	269	MalNode Info Transfer between	p5 m_f135
+11507.600000024333	270	MalNode Info Transfer between	c45 c49
+11529.200000024412	271	MalNode Info Transfer between	c46 t82
+11564.200000024539	272	MalNode Info Transfer between	c31 p7
+11564.200000024539	273	MalNode Info Transfer between	c31 p7
+11602.500000024678	274	MalNode Info Transfer between	m_s103 c32
+11602.500000024678	275	MalNode Info Transfer between	m_s103 c32
+11612.100000024713	276	MalNode Info Transfer between	m_f130 t82
+11627.70000002477	277	MalNode Info Transfer between	m_s115 c37
+11636.900000024803	278	MalNode Info Transfer between	c49 p15
+11680.700000024963	279	MalNode Info Transfer between	w61 c42
+11680.700000024963	280	MalNode Info Transfer between	w61 c42
+11707.20000002506	281	MalNode Info Transfer between	c50 m_s114
+11742.400000025187	281	M17	Message Info Transfer between	f146 and m_s105
+11742.400000025187	283	MalNode Info Transfer between	f146 m_s105
+11742.400000025187	284	m_s105	MalNode Info Transfer between	f146 m_s105
+11749.700000025214	286	MalNode Info Transfer between	m_f126 t88
+11792.000000025368	288	MalNode Info Transfer between	t84 w62
+11804.900000025415	290	MalNode Info Transfer between	c35 p4
+11804.900000025415	292	MalNode Info Transfer between	c35 p4
+11808.90000002543	294	MalNode Info Transfer between	p26 c31
+11811.600000025439	296	MalNode Info Transfer between	t89 m_s108
+11834.200000025521	298	MalNode Info Transfer between	p29 m_f124
+11834.200000025521	300	MalNode Info Transfer between	p29 m_f124
+11845.10000002556	302	MalNode Info Transfer between	p2 c43
+11845.10000002556	304	MalNode Info Transfer between	p2 c43
+11855.200000025598	306	MalNode Info Transfer between	c41 w61
+11857.100000025604	308	MalNode Info Transfer between	m_f126 m_s101
+11929.000000025866	310	MalNode Info Transfer between	p6 t88
+11929.500000025868	312	MalNode Info Transfer between	c44 m_f121
+11929.500000025868	314	MalNode Info Transfer between	c44 m_f121
+11962.200000025987	316	MalNode Info Transfer between	c42 m_s119
+11967.200000026005	318	MalNode Info Transfer between	m_f131 c46
+11983.800000026065	320	MalNode Info Transfer between	t98 p20
+11990.60000002609	322	MalNode Info Transfer between	m_s102 c54
+11996.10000002611	324	MalNode Info Transfer between	t81 m_s104
+12016.000000026183	326	MalNode Info Transfer between	c43 m_s109
+12103.000000026499	328	MalNode Info Transfer between	c44 c30
+12204.80000002687	330	MalNode Info Transfer between	c36 w56
+12279.700000027142	332	MalNode Info Transfer between	c38 p15
+12306.400000027239	333	Contact Info Transfer between	f140 w72
+12306.400000027239	334	Contact Info Transfer between	f140 w72
+12306.400000027239	335	Contact Info Transfer between	f140 w72
+12306.400000027239	340	LER nd LT Info Transfer between	f140 w72
+12307.500000027243	341	Contact Info Transfer between	f140 w72
+12307.500000027243	342	Contact Info Transfer between	f140 w72
+12307.500000027243	343	Contact Info Transfer between	f140 w72
+12307.500000027243	348	LER nd LT Info Transfer between	f140 w72
+12313.800000027266	350	MalNode Info Transfer between	f140 w72
+12316.500000027276	352	MalNode Info Transfer between	c41 p27
+12328.000000027318	354	MalNode Info Transfer between	m_f132 t92
+12390.200000027544	356	MalNode Info Transfer between	w56 c40
+12403.400000027592	358	MalNode Info Transfer between	t81 m_s112
+12442.100000027733	360	MalNode Info Transfer between	c47 m_f137
+12442.100000027733	362	MalNode Info Transfer between	c47 m_f137
+12517.500000028007	364	MalNode Info Transfer between	w76 c53
+12536.700000028077	366	MalNode Info Transfer between	w55 c36
+12548.80000002812	368	MalNode Info Transfer between	w77 c42
+12573.20000002821	370	MalNode Info Transfer between	m_f122 m_s111
+12639.20000002845	372	MalNode Info Transfer between	p19 t91
+12642.700000028462	374	MalNode Info Transfer between	p21 t88
+12649.300000028486	376	MalNode Info Transfer between	p12 t86
+12706.400000028694	378	MalNode Info Transfer between	m_f122 w60
+12706.700000028695	380	MalNode Info Transfer between	p28 m_s101
+12802.700000029045	382	MalNode Info Transfer between	w70 t85
+12851.300000029221	384	MalNode Info Transfer between	c39 t81
+12935.400000029527	386	MalNode Info Transfer between	w57 t83
+12938.600000029539	388	MalNode Info Transfer between	p26 c52
+12980.800000029692	390	MalNode Info Transfer between	m_s113 c48
+12980.800000029692	392	MalNode Info Transfer between	m_s113 c48
+13038.600000029903	394	MalNode Info Transfer between	c34 w75
+13107.400000030153	396	MalNode Info Transfer between	p1 p29
+13158.300000030338	398	MalNode Info Transfer between	c40 w79
+13169.300000030378	400	MalNode Info Transfer between	p16 t91
+13259.900000030708	402	MalNode Info Transfer between	t92 p24
+13267.900000030737	404	MalNode Info Transfer between	t93 p18
+13341.100000031003	406	MalNode Info Transfer between	w69 t98
+13401.100000031221	408	MalNode Info Transfer between	c51 m_f138
+13497.00000003157	410	MalNode Info Transfer between	c47 p22
+13517.200000031644	412	MalNode Info Transfer between	c33 w79
+13520.200000031655	414	MalNode Info Transfer between	m_s107 c30
+13530.200000031691	416	MalNode Info Transfer between	t85 w64
+13548.90000003176	418	MalNode Info Transfer between	p23 c37
+13656.40000003215	420	MalNode Info Transfer between	m_s118 c34
+13769.300000032561	422	MalNode Info Transfer between	w65 t82
+13863.900000032905	424	MalNode Info Transfer between	w63 p7
+13960.900000033258	426	MalNode Info Transfer between	m_f123 t88
+13982.100000033335	428	MalNode Info Transfer between	m_f127 c31
+14037.300000033536	430	MalNode Info Transfer between	m_s117 t92
+14052.500000033591	432	MalNode Info Transfer between	c43 m_s100
+14057.300000033609	434	MalNode Info Transfer between	m_f124 p10
+14188.500000034086	436	MalNode Info Transfer between	t95 m_f120
+14337.500000034628	438	MalNode Info Transfer between	w67 p3
+14361.200000034714	440	MalNode Info Transfer between	t99 m_f139
+14363.900000034724	442	MalNode Info Transfer between	m_f129 w76
+14381.600000034789	444	MalNode Info Transfer between	m_s110 c52
+14678.200000035868	446	MalNode Info Transfer between	w75 m_s106
+14693.700000035924	448	MalNode Info Transfer between	c37 p14
+14816.10000003637	450	MalNode Info Transfer between	w74 c45
+14845.000000036474	452	MalNode Info Transfer between	w68 c31
+14963.700000036906	454	MalNode Info Transfer between	p25 c50
+15079.900000037329	454	M106	Message Info Transfer between	f141 and m_s109
+15079.900000037329	455	m_s109	MalNode Info Transfer between	f141 m_s109
+15174.900000037675	458	MalNode Info Transfer between	m_f138 p11
+15486.400000038808	461	MalNode Info Transfer between	c38 w78
+15699.800000039584	464	MalNode Info Transfer between	c44 w71
+16011.100000040717	465	Contact Info Transfer between	f147 m_f139
+16011.100000040717	466	Contact Info Transfer between	f147 m_f139
+16011.100000040717	467	Contact Info Transfer between	f147 m_f139
+16011.100000040717	468	Contact Info Transfer between	f147 m_f139
+16011.100000040717	469	Contact Info Transfer between	f147 m_f139
+16011.100000040717	494	LER nd LT Info Transfer between	f147 m_f139
+16011.100000040717	495	m_f139	MalNode Info Transfer between	m_f139 f147
+16269.800000041658	499	MalNode Info Transfer between	w59 c32
+16421.800000041523	503	MalNode Info Transfer between	p1 m_f133
+16625.600000038557	507	MalNode Info Transfer between	w78 p13
+17077.900000031976	511	MalNode Info Transfer between	w73 c51
+17454.700000026492	515	MalNode Info Transfer between	c44 m_f125
+17780.00000002176	519	MalNode Info Transfer between	c53 m_f134
+18072.200000017507	520	Contact Info Transfer between	f143 t83
+18072.200000017507	521	Contact Info Transfer between	f143 t83
+18072.200000017507	522	Contact Info Transfer between	f143 t83
+18072.200000017507	523	Contact Info Transfer between	f143 t83
+18072.200000017507	524	Contact Info Transfer between	f143 t83
+18072.200000017507	525	Contact Info Transfer between	f143 t83
+18072.200000017507	526	Contact Info Transfer between	f143 t83
+18072.200000017507	527	Contact Info Transfer between	f143 t83
+18072.200000017507	528	Contact Info Transfer between	f143 t83
+18072.200000017507	529	Contact Info Transfer between	f143 t83
+18072.200000017507	530	Contact Info Transfer between	f143 t83
+18072.200000017507	531	Contact Info Transfer between	f143 t83
+18072.200000017507	532	Contact Info Transfer between	f143 t83
+18072.200000017507	533	Contact Info Transfer between	f143 t83
+18072.200000017507	534	Contact Info Transfer between	f143 t83
+18072.200000017507	535	Contact Info Transfer between	f143 t83
+18072.200000017507	536	Contact Info Transfer between	f143 t83
+18072.200000017507	537	Contact Info Transfer between	f143 t83
+18072.200000017507	538	Contact Info Transfer between	f143 t83
+18072.200000017507	539	Contact Info Transfer between	f143 t83
+18072.200000017507	540	Contact Info Transfer between	f143 t83
+18072.200000017507	601	LER nd LT Info Transfer between	f143 t83
+18204.900000015576	605	MalNode Info Transfer between	m_f136 w69
+19187.100000001283	609	MalNode Info Transfer between	p0 t98
+19251.20000000035	613	MalNode Info Transfer between	w58 t86
+19603.69999999522	617	MalNode Info Transfer between	m_s116 c36
+19679.699999994114	621	MalNode Info Transfer between	m_f138 p8
+20453.299999982857	622	Contact Info Transfer between	f145 p21
+20453.299999982857	623	Contact Info Transfer between	f145 p21
+20453.299999982857	624	Contact Info Transfer between	f145 p21
+20453.299999982857	625	Contact Info Transfer between	f145 p21
+20453.299999982857	626	Contact Info Transfer between	f145 p21
+20453.299999982857	627	Contact Info Transfer between	f145 p21
+20453.299999982857	628	Contact Info Transfer between	f145 p21
+20453.299999982857	667	LER nd LT Info Transfer between	f145 p21
+20460.299999982755	668	Contact Info Transfer between	f146 w74
+20460.299999982755	669	Contact Info Transfer between	f146 w74
+20460.299999982755	670	Contact Info Transfer between	f146 w74
+20460.299999982755	688	LER nd LT Info Transfer between	f146 w74
+21327.89999997013	688	M15	Message Info Transfer between	f142 and m_s101
+21327.89999997013	689	m_s101	MalNode Info Transfer between	f142 m_s101
+21614.299999965962	690	Contact Info Transfer between	f146 w72
+21614.299999965962	691	Contact Info Transfer between	f146 w72
+21614.299999965962	692	Contact Info Transfer between	f146 w72
+21614.299999965962	693	Contact Info Transfer between	f146 w72
+21614.299999965962	694	Contact Info Transfer between	f146 w72
+21614.299999965962	695	Contact Info Transfer between	f146 w72
+21614.299999965962	696	Contact Info Transfer between	f146 w72
+21614.299999965962	697	Contact Info Transfer between	f146 w72
+21614.299999965962	698	Contact Info Transfer between	f146 w72
+21614.299999965962	715	LER nd LT Info Transfer between	f146 w72
+21621.199999965862	716	Contact Info Transfer between	f146 w72
+21621.199999965862	717	Contact Info Transfer between	f146 w72
+21621.199999965862	718	Contact Info Transfer between	f146 w72
+21621.199999965862	719	Contact Info Transfer between	f146 w72
+21621.199999965862	720	Contact Info Transfer between	f146 w72
+21621.199999965862	721	Contact Info Transfer between	f146 w72
+21621.199999965862	722	Contact Info Transfer between	f146 w72
+21621.199999965862	723	Contact Info Transfer between	f146 w72
+21621.199999965862	724	Contact Info Transfer between	f146 w72
+21621.199999965862	741	LER nd LT Info Transfer between	f146 w72
+22342.29999995537	741	M101	Message Info Transfer between	f144 and m_s114
+22342.29999995537	742	m_s114	MalNode Info Transfer between	f144 m_s114
+24857.89999991876	743	Contact Info Transfer between	f143 m_f136
+24857.89999991876	744	Contact Info Transfer between	f143 m_f136
+24857.89999991876	745	Contact Info Transfer between	f143 m_f136
+24857.89999991876	782	LER nd LT Info Transfer between	f143 m_f136
+24857.89999991876	783	m_f136	MalNode Info Transfer between	m_f136 f143
+25242.09999991317	784	Contact Info Transfer between	f146 p21
+25242.09999991317	785	Contact Info Transfer between	f146 p21
+25242.09999991317	786	Contact Info Transfer between	f146 p21
+25242.09999991317	787	Contact Info Transfer between	f146 p21
+25242.09999991317	788	Contact Info Transfer between	f146 p21
+25242.09999991317	789	Contact Info Transfer between	f146 p21
+25242.09999991317	790	Contact Info Transfer between	f146 p21
+25242.09999991317	791	Contact Info Transfer between	f146 p21
+25242.09999991317	792	Contact Info Transfer between	f146 p21
+25242.09999991317	793	Contact Info Transfer between	f146 p21
+25242.09999991317	839	LER nd LT Info Transfer between	f146 p21
+25810.299999904903	840	Contact Info Transfer between	f143 p5
+25810.299999904903	841	Contact Info Transfer between	f143 p5
+25810.299999904903	842	Contact Info Transfer between	f143 p5
+25810.299999904903	843	Contact Info Transfer between	f143 p5
+25810.299999904903	871	LER nd LT Info Transfer between	f143 p5
+27306.999999883123	872	Contact Info Transfer between	f149 p4
+27306.999999883123	873	Contact Info Transfer between	f149 p4
+27306.999999883123	874	Contact Info Transfer between	f149 p4
+27306.999999883123	875	Contact Info Transfer between	f149 p4
+27306.999999883123	876	Contact Info Transfer between	f149 p4
+27306.999999883123	877	Contact Info Transfer between	f149 p4
+27306.999999883123	878	Contact Info Transfer between	f149 p4
+27306.999999883123	879	Contact Info Transfer between	f149 p4
+27306.999999883123	880	Contact Info Transfer between	f149 p4
+27306.999999883123	905	LER nd LT Info Transfer between	f149 p4
+28396.899999867263	905	M217	Message Info Transfer between	f142 and m_s108
+28396.899999867263	906	m_s108	MalNode Info Transfer between	f142 m_s108
+29535.599999850692	907	Contact Info Transfer between	f146 m_f121
+29535.599999850692	908	Contact Info Transfer between	f146 m_f121
+29535.599999850692	909	Contact Info Transfer between	f146 m_f121
+29535.599999850692	910	Contact Info Transfer between	f146 m_f121
+29535.599999850692	911	Contact Info Transfer between	f146 m_f121
+29535.599999850692	912	Contact Info Transfer between	f146 m_f121
+29535.599999850692	913	Contact Info Transfer between	f146 m_f121
+29535.599999850692	914	Contact Info Transfer between	f146 m_f121
+29535.599999850692	915	Contact Info Transfer between	f146 m_f121
+29535.599999850692	946	LER nd LT Info Transfer between	f146 m_f121
+29535.599999850692	947	m_f121	MalNode Info Transfer between	m_f121 f146
+30589.599999835355	948	Contact Info Transfer between	f147 t83
+30589.599999835355	949	Contact Info Transfer between	f147 t83
+30589.599999835355	950	Contact Info Transfer between	f147 t83
+30589.599999835355	951	Contact Info Transfer between	f147 t83
+30589.599999835355	952	Contact Info Transfer between	f147 t83
+30589.599999835355	953	Contact Info Transfer between	f147 t83
+30589.599999835355	954	Contact Info Transfer between	f147 t83
+30589.599999835355	955	Contact Info Transfer between	f147 t83
+30589.599999835355	956	Contact Info Transfer between	f147 t83
+30589.599999835355	957	Contact Info Transfer between	f147 t83
+30589.599999835355	958	Contact Info Transfer between	f147 t83
+30589.599999835355	959	Contact Info Transfer between	f147 t83
+30589.599999835355	960	Contact Info Transfer between	f147 t83
+30589.599999835355	961	Contact Info Transfer between	f147 t83
+30589.599999835355	962	Contact Info Transfer between	f147 t83
+30589.599999835355	963	Contact Info Transfer between	f147 t83
+30589.599999835355	964	Contact Info Transfer between	f147 t83
+30589.599999835355	965	Contact Info Transfer between	f147 t83
+30589.599999835355	966	Contact Info Transfer between	f147 t83
+30589.599999835355	967	Contact Info Transfer between	f147 t83
+30589.599999835355	968	Contact Info Transfer between	f147 t83
+30589.599999835355	969	Contact Info Transfer between	f147 t83
+30589.599999835355	970	Contact Info Transfer between	f147 t83
+30589.599999835355	971	Contact Info Transfer between	f147 t83
+30589.599999835355	972	Contact Info Transfer between	f147 t83
+30589.599999835355	973	Contact Info Transfer between	f147 t83
+30589.599999835355	974	Contact Info Transfer between	f147 t83
+30589.599999835355	975	Contact Info Transfer between	f147 t83
+30589.599999835355	1066	LER nd LT Info Transfer between	f147 t83
+31529.29999982168	1067	Contact Info Transfer between	f147 w64
+31529.29999982168	1068	Contact Info Transfer between	f147 w64
+31529.29999982168	1069	Contact Info Transfer between	f147 w64
+31529.29999982168	1088	LER nd LT Info Transfer between	f147 w64
+60.0 31579: 526.32 1/s
+32070.7999998138	1089	Contact Info Transfer between	f146 p21
+32070.7999998138	1090	Contact Info Transfer between	f146 p21
+32070.7999998138	1091	Contact Info Transfer between	f146 p21
+32070.7999998138	1092	Contact Info Transfer between	f146 p21
+32070.7999998138	1093	Contact Info Transfer between	f146 p21
+32070.7999998138	1094	Contact Info Transfer between	f146 p21
+32070.7999998138	1095	Contact Info Transfer between	f146 p21
+32070.7999998138	1096	Contact Info Transfer between	f146 p21
+32070.7999998138	1097	Contact Info Transfer between	f146 p21
+32070.7999998138	1098	Contact Info Transfer between	f146 p21
+32070.7999998138	1099	Contact Info Transfer between	f146 p21
+32070.7999998138	1151	LER nd LT Info Transfer between	f146 p21
+32491.39999980768	1151	M187	Message Info Transfer between	f149 and m_s107
+32491.39999980768	1152	m_s107	MalNode Info Transfer between	f149 m_s107
+33281.19999979619	1152	M17	Message Info Transfer between	f141 and m_s105
+34297.4999997814	1152	M259	Message Info Transfer between	f141 and m_s112
+34297.4999997814	1153	m_s112	MalNode Info Transfer between	f141 m_s112
+37678.6999997322	1153	M28	Message Info Transfer between	f142 and m_s103
+37678.6999997322	1154	m_s103	MalNode Info Transfer between	f142 m_s103
+37971.99999972793	1154	M217	Message Info Transfer between	f144 and m_s108
+38121.79999972575	1154	M39	Message Info Transfer between	f143 and m_s119
+38121.79999972575	1155	m_s119	MalNode Info Transfer between	f143 m_s119
+38216.899999724366	1156	Contact Info Transfer between	f148 t85
+38216.899999724366	1157	Contact Info Transfer between	f148 t85
+38216.899999724366	1158	Contact Info Transfer between	f148 t85
+38216.899999724366	1159	Contact Info Transfer between	f148 t85
+38216.899999724366	1160	Contact Info Transfer between	f148 t85
+38216.899999724366	1161	Contact Info Transfer between	f148 t85
+38216.899999724366	1162	Contact Info Transfer between	f148 t85
+38216.899999724366	1163	Contact Info Transfer between	f148 t85
+38216.899999724366	1164	Contact Info Transfer between	f148 t85
+38216.899999724366	1165	Contact Info Transfer between	f148 t85
+38216.899999724366	1166	Contact Info Transfer between	f148 t85
+38216.899999724366	1167	Contact Info Transfer between	f148 t85
+38216.899999724366	1168	Contact Info Transfer between	f148 t85
+38216.899999724366	1169	Contact Info Transfer between	f148 t85
+38216.899999724366	1170	Contact Info Transfer between	f148 t85
+38216.899999724366	1171	Contact Info Transfer between	f148 t85
+38216.899999724366	1172	Contact Info Transfer between	f148 t85
+38216.899999724366	1173	Contact Info Transfer between	f148 t85
+38216.899999724366	1174	Contact Info Transfer between	f148 t85
+38216.899999724366	1175	Contact Info Transfer between	f148 t85
+38216.899999724366	1176	Contact Info Transfer between	f148 t85
+38216.899999724366	1177	Contact Info Transfer between	f148 t85
+38216.899999724366	1178	Contact Info Transfer between	f148 t85
+38216.899999724366	1179	Contact Info Transfer between	f148 t85
+38216.899999724366	1180	Contact Info Transfer between	f148 t85
+38216.899999724366	1181	Contact Info Transfer between	f148 t85
+38216.899999724366	1182	Contact Info Transfer between	f148 t85
+38216.899999724366	1183	Contact Info Transfer between	f148 t85
+38216.899999724366	1184	Contact Info Transfer between	f148 t85
+38216.899999724366	1296	LER nd LT Info Transfer between	f148 t85
+38217.99999972435	1297	Contact Info Transfer between	f148 t85
+38217.99999972435	1298	Contact Info Transfer between	f148 t85
+38217.99999972435	1299	Contact Info Transfer between	f148 t85
+38217.99999972435	1300	Contact Info Transfer between	f148 t85
+38217.99999972435	1301	Contact Info Transfer between	f148 t85
+38217.99999972435	1302	Contact Info Transfer between	f148 t85
+38217.99999972435	1303	Contact Info Transfer between	f148 t85
+38217.99999972435	1304	Contact Info Transfer between	f148 t85
+38217.99999972435	1305	Contact Info Transfer between	f148 t85
+38217.99999972435	1306	Contact Info Transfer between	f148 t85
+38217.99999972435	1307	Contact Info Transfer between	f148 t85
+38217.99999972435	1308	Contact Info Transfer between	f148 t85
+38217.99999972435	1309	Contact Info Transfer between	f148 t85
+38217.99999972435	1310	Contact Info Transfer between	f148 t85
+38217.99999972435	1311	Contact Info Transfer between	f148 t85
+38217.99999972435	1312	Contact Info Transfer between	f148 t85
+38217.99999972435	1313	Contact Info Transfer between	f148 t85
+38217.99999972435	1314	Contact Info Transfer between	f148 t85
+38217.99999972435	1315	Contact Info Transfer between	f148 t85
+38217.99999972435	1316	Contact Info Transfer between	f148 t85
+38217.99999972435	1317	Contact Info Transfer between	f148 t85
+38217.99999972435	1318	Contact Info Transfer between	f148 t85
+38217.99999972435	1319	Contact Info Transfer between	f148 t85
+38217.99999972435	1320	Contact Info Transfer between	f148 t85
+38217.99999972435	1321	Contact Info Transfer between	f148 t85
+38217.99999972435	1322	Contact Info Transfer between	f148 t85
+38217.99999972435	1323	Contact Info Transfer between	f148 t85
+38217.99999972435	1324	Contact Info Transfer between	f148 t85
+38217.99999972435	1325	Contact Info Transfer between	f148 t85
+38217.99999972435	1437	LER nd LT Info Transfer between	f148 t85
+40281.89999969432	1437	M87	Message Info Transfer between	f146 and m_s107
+43176.59999965219	1438	Contact Info Transfer between	f143 t86
+43176.59999965219	1439	Contact Info Transfer between	f143 t86
+43176.59999965219	1440	Contact Info Transfer between	f143 t86
+43176.59999965219	1441	Contact Info Transfer between	f143 t86
+43176.59999965219	1442	Contact Info Transfer between	f143 t86
+43176.59999965219	1443	Contact Info Transfer between	f143 t86
+43176.59999965219	1444	Contact Info Transfer between	f143 t86
+43176.59999965219	1445	Contact Info Transfer between	f143 t86
+43176.59999965219	1446	Contact Info Transfer between	f143 t86
+43176.59999965219	1447	Contact Info Transfer between	f143 t86
+43176.59999965219	1448	Contact Info Transfer between	f143 t86
+43176.59999965219	1449	Contact Info Transfer between	f143 t86
+43176.59999965219	1450	Contact Info Transfer between	f143 t86
+43176.59999965219	1451	Contact Info Transfer between	f143 t86
+43176.59999965219	1452	Contact Info Transfer between	f143 t86
+43176.59999965219	1453	Contact Info Transfer between	f143 t86
+43176.59999965219	1454	Contact Info Transfer between	f143 t86
+43176.59999965219	1455	Contact Info Transfer between	f143 t86
+43176.59999965219	1456	Contact Info Transfer between	f143 t86
+43176.59999965219	1457	Contact Info Transfer between	f143 t86
+43176.59999965219	1458	Contact Info Transfer between	f143 t86
+43176.59999965219	1459	Contact Info Transfer between	f143 t86
+43176.59999965219	1460	Contact Info Transfer between	f143 t86
+43176.59999965219	1461	Contact Info Transfer between	f143 t86
+43176.59999965219	1462	Contact Info Transfer between	f143 t86
+43176.59999965219	1463	Contact Info Transfer between	f143 t86
+43176.59999965219	1464	Contact Info Transfer between	f143 t86
+43176.59999965219	1465	Contact Info Transfer between	f143 t86
+43176.59999965219	1466	Contact Info Transfer between	f143 t86
+43176.59999965219	1467	Contact Info Transfer between	f143 t86
+43176.59999965219	1468	Contact Info Transfer between	f143 t86
+43176.59999965219	1469	Contact Info Transfer between	f143 t86
+43176.59999965219	1470	Contact Info Transfer between	f143 t86
+43176.59999965219	1471	Contact Info Transfer between	f143 t86
+43176.59999965219	1472	Contact Info Transfer between	f143 t86
+43176.59999965219	1473	Contact Info Transfer between	f143 t86
+43176.59999965219	1474	Contact Info Transfer between	f143 t86
+43176.59999965219	1475	Contact Info Transfer between	f143 t86
+43176.59999965219	1476	Contact Info Transfer between	f143 t86
+43176.59999965219	1608	LER nd LT Info Transfer between	f143 t86
+45115.39999962398	1608	M78	Message Info Transfer between	f145 and m_s116
+45115.39999962398	1609	m_s116	MalNode Info Transfer between	f145 m_s116
+47040.89999959596	1610	Contact Info Transfer between	f141 p10
+47040.89999959596	1611	Contact Info Transfer between	f141 p10
+47040.89999959596	1612	Contact Info Transfer between	f141 p10
+47040.89999959596	1613	Contact Info Transfer between	f141 p10
+47040.89999959596	1614	Contact Info Transfer between	f141 p10
+47040.89999959596	1615	Contact Info Transfer between	f141 p10
+47040.89999959596	1616	Contact Info Transfer between	f141 p10
+47040.89999959596	1617	Contact Info Transfer between	f141 p10
+47040.89999959596	1618	Contact Info Transfer between	f141 p10
+47040.89999959596	1657	LER nd LT Info Transfer between	f141 p10
+47786.49999958511	1657	M116	Message Info Transfer between	f141 and m_s108
+47791.89999958503	1658	Contact Info Transfer between	f146 t82
+47791.89999958503	1659	Contact Info Transfer between	f146 t82
+47791.89999958503	1660	Contact Info Transfer between	f146 t82
+47791.89999958503	1661	Contact Info Transfer between	f146 t82
+47791.89999958503	1662	Contact Info Transfer between	f146 t82
+47791.89999958503	1663	Contact Info Transfer between	f146 t82
+47791.89999958503	1664	Contact Info Transfer between	f146 t82
+47791.89999958503	1665	Contact Info Transfer between	f146 t82
+47791.89999958503	1666	Contact Info Transfer between	f146 t82
+47791.89999958503	1667	Contact Info Transfer between	f146 t82
+47791.89999958503	1668	Contact Info Transfer between	f146 t82
+47791.89999958503	1669	Contact Info Transfer between	f146 t82
+47791.89999958503	1670	Contact Info Transfer between	f146 t82
+47791.89999958503	1671	Contact Info Transfer between	f146 t82
+47791.89999958503	1672	Contact Info Transfer between	f146 t82
+47791.89999958503	1673	Contact Info Transfer between	f146 t82
+47791.89999958503	1674	Contact Info Transfer between	f146 t82
+47791.89999958503	1675	Contact Info Transfer between	f146 t82
+47791.89999958503	1676	Contact Info Transfer between	f146 t82
+47791.89999958503	1677	Contact Info Transfer between	f146 t82
+47791.89999958503	1678	Contact Info Transfer between	f146 t82
+47791.89999958503	1679	Contact Info Transfer between	f146 t82
+47791.89999958503	1680	Contact Info Transfer between	f146 t82
+47791.89999958503	1681	Contact Info Transfer between	f146 t82
+47791.89999958503	1682	Contact Info Transfer between	f146 t82
+47791.89999958503	1683	Contact Info Transfer between	f146 t82
+47791.89999958503	1684	Contact Info Transfer between	f146 t82
+47791.89999958503	1685	Contact Info Transfer between	f146 t82
+47791.89999958503	1686	Contact Info Transfer between	f146 t82
+47791.89999958503	1687	Contact Info Transfer between	f146 t82
+47791.89999958503	1688	Contact Info Transfer between	f146 t82
+47791.89999958503	1689	Contact Info Transfer between	f146 t82
+47791.89999958503	1690	Contact Info Transfer between	f146 t82
+47791.89999958503	1691	Contact Info Transfer between	f146 t82
+47791.89999958503	1692	Contact Info Transfer between	f146 t82
+47791.89999958503	1693	Contact Info Transfer between	f146 t82
+47791.89999958503	1694	Contact Info Transfer between	f146 t82
+47791.89999958503	1695	Contact Info Transfer between	f146 t82
+47791.89999958503	1696	Contact Info Transfer between	f146 t82
+47791.89999958503	1697	Contact Info Transfer between	f146 t82
+47791.89999958503	1698	Contact Info Transfer between	f146 t82
+47791.89999958503	1835	LER nd LT Info Transfer between	f146 t82
+47795.59999958498	1836	Contact Info Transfer between	f146 t82
+47795.59999958498	1837	Contact Info Transfer between	f146 t82
+47795.59999958498	1838	Contact Info Transfer between	f146 t82
+47795.59999958498	1839	Contact Info Transfer between	f146 t82
+47795.59999958498	1840	Contact Info Transfer between	f146 t82
+47795.59999958498	1841	Contact Info Transfer between	f146 t82
+47795.59999958498	1842	Contact Info Transfer between	f146 t82
+47795.59999958498	1843	Contact Info Transfer between	f146 t82
+47795.59999958498	1844	Contact Info Transfer between	f146 t82
+47795.59999958498	1845	Contact Info Transfer between	f146 t82
+47795.59999958498	1846	Contact Info Transfer between	f146 t82
+47795.59999958498	1847	Contact Info Transfer between	f146 t82
+47795.59999958498	1848	Contact Info Transfer between	f146 t82
+47795.59999958498	1849	Contact Info Transfer between	f146 t82
+47795.59999958498	1850	Contact Info Transfer between	f146 t82
+47795.59999958498	1851	Contact Info Transfer between	f146 t82
+47795.59999958498	1852	Contact Info Transfer between	f146 t82
+47795.59999958498	1853	Contact Info Transfer between	f146 t82
+47795.59999958498	1854	Contact Info Transfer between	f146 t82
+47795.59999958498	1855	Contact Info Transfer between	f146 t82
+47795.59999958498	1856	Contact Info Transfer between	f146 t82
+47795.59999958498	1857	Contact Info Transfer between	f146 t82
+47795.59999958498	1858	Contact Info Transfer between	f146 t82
+47795.59999958498	1859	Contact Info Transfer between	f146 t82
+47795.59999958498	1860	Contact Info Transfer between	f146 t82
+47795.59999958498	1861	Contact Info Transfer between	f146 t82
+47795.59999958498	1862	Contact Info Transfer between	f146 t82
+47795.59999958498	1863	Contact Info Transfer between	f146 t82
+47795.59999958498	1864	Contact Info Transfer between	f146 t82
+47795.59999958498	1865	Contact Info Transfer between	f146 t82
+47795.59999958498	1866	Contact Info Transfer between	f146 t82
+47795.59999958498	1867	Contact Info Transfer between	f146 t82
+47795.59999958498	1868	Contact Info Transfer between	f146 t82
+47795.59999958498	1869	Contact Info Transfer between	f146 t82
+47795.59999958498	1870	Contact Info Transfer between	f146 t82
+47795.59999958498	1871	Contact Info Transfer between	f146 t82
+47795.59999958498	1872	Contact Info Transfer between	f146 t82
+47795.59999958498	1873	Contact Info Transfer between	f146 t82
+47795.59999958498	1874	Contact Info Transfer between	f146 t82
+47795.59999958498	1875	Contact Info Transfer between	f146 t82
+47795.59999958498	1876	Contact Info Transfer between	f146 t82
+47795.59999958498	2013	LER nd LT Info Transfer between	f146 t82
+47797.099999584956	2014	Contact Info Transfer between	f146 t82
+47797.099999584956	2015	Contact Info Transfer between	f146 t82
+47797.099999584956	2016	Contact Info Transfer between	f146 t82
+47797.099999584956	2017	Contact Info Transfer between	f146 t82
+47797.099999584956	2018	Contact Info Transfer between	f146 t82
+47797.099999584956	2019	Contact Info Transfer between	f146 t82
+47797.099999584956	2020	Contact Info Transfer between	f146 t82
+47797.099999584956	2021	Contact Info Transfer between	f146 t82
+47797.099999584956	2022	Contact Info Transfer between	f146 t82
+47797.099999584956	2023	Contact Info Transfer between	f146 t82
+47797.099999584956	2024	Contact Info Transfer between	f146 t82
+47797.099999584956	2025	Contact Info Transfer between	f146 t82
+47797.099999584956	2026	Contact Info Transfer between	f146 t82
+47797.099999584956	2027	Contact Info Transfer between	f146 t82
+47797.099999584956	2028	Contact Info Transfer between	f146 t82
+47797.099999584956	2029	Contact Info Transfer between	f146 t82
+47797.099999584956	2030	Contact Info Transfer between	f146 t82
+47797.099999584956	2031	Contact Info Transfer between	f146 t82
+47797.099999584956	2032	Contact Info Transfer between	f146 t82
+47797.099999584956	2033	Contact Info Transfer between	f146 t82
+47797.099999584956	2034	Contact Info Transfer between	f146 t82
+47797.099999584956	2035	Contact Info Transfer between	f146 t82
+47797.099999584956	2036	Contact Info Transfer between	f146 t82
+47797.099999584956	2037	Contact Info Transfer between	f146 t82
+47797.099999584956	2038	Contact Info Transfer between	f146 t82
+47797.099999584956	2039	Contact Info Transfer between	f146 t82
+47797.099999584956	2040	Contact Info Transfer between	f146 t82
+47797.099999584956	2041	Contact Info Transfer between	f146 t82
+47797.099999584956	2042	Contact Info Transfer between	f146 t82
+47797.099999584956	2043	Contact Info Transfer between	f146 t82
+47797.099999584956	2044	Contact Info Transfer between	f146 t82
+47797.099999584956	2045	Contact Info Transfer between	f146 t82
+47797.099999584956	2046	Contact Info Transfer between	f146 t82
+47797.099999584956	2047	Contact Info Transfer between	f146 t82
+47797.099999584956	2048	Contact Info Transfer between	f146 t82
+47797.099999584956	2049	Contact Info Transfer between	f146 t82
+47797.099999584956	2050	Contact Info Transfer between	f146 t82
+47797.099999584956	2051	Contact Info Transfer between	f146 t82
+47797.099999584956	2052	Contact Info Transfer between	f146 t82
+47797.099999584956	2053	Contact Info Transfer between	f146 t82
+47797.099999584956	2054	Contact Info Transfer between	f146 t82
+47797.099999584956	2191	LER nd LT Info Transfer between	f146 t82
+47819.69999958463	2192	Contact Info Transfer between	f146 p24
+47819.69999958463	2193	Contact Info Transfer between	f146 p24
+47819.69999958463	2194	Contact Info Transfer between	f146 p24
+47819.69999958463	2195	Contact Info Transfer between	f146 p24
+47819.69999958463	2196	Contact Info Transfer between	f146 p24
+47819.69999958463	2223	LER nd LT Info Transfer between	f146 p24
+47820.09999958462	2224	Contact Info Transfer between	f146 p24
+47820.09999958462	2225	Contact Info Transfer between	f146 p24
+47820.09999958462	2226	Contact Info Transfer between	f146 p24
+47820.09999958462	2227	Contact Info Transfer between	f146 p24
+47820.09999958462	2228	Contact Info Transfer between	f146 p24
+47820.09999958462	2255	LER nd LT Info Transfer between	f146 p24
+47824.19999958456	2256	Contact Info Transfer between	f146 p24
+47824.19999958456	2257	Contact Info Transfer between	f146 p24
+47824.19999958456	2258	Contact Info Transfer between	f146 p24
+47824.19999958456	2259	Contact Info Transfer between	f146 p24
+47824.19999958456	2260	Contact Info Transfer between	f146 p24
+47824.19999958456	2287	LER nd LT Info Transfer between	f146 p24
+47852.59999958415	2287	M68	Message Info Transfer between	f146 and m_s110
+47852.59999958415	2288	m_s110	MalNode Info Transfer between	f146 m_s110
+48580.09999957356	2288	M197	Message Info Transfer between	f144 and m_s108
+49218.49999956427	2289	Contact Info Transfer between	f149 p4
+49218.49999956427	2290	Contact Info Transfer between	f149 p4
+49218.49999956427	2291	Contact Info Transfer between	f149 p4
+49218.49999956427	2292	Contact Info Transfer between	f149 p4
+49218.49999956427	2293	Contact Info Transfer between	f149 p4
+49218.49999956427	2294	Contact Info Transfer between	f149 p4
+49218.49999956427	2295	Contact Info Transfer between	f149 p4
+49218.49999956427	2296	Contact Info Transfer between	f149 p4
+49218.49999956427	2297	Contact Info Transfer between	f149 p4
+49218.49999956427	2298	Contact Info Transfer between	f149 p4
+49218.49999956427	2299	Contact Info Transfer between	f149 p4
+49218.49999956427	2300	Contact Info Transfer between	f149 p4
+49218.49999956427	2301	Contact Info Transfer between	f149 p4
+49218.49999956427	2302	Contact Info Transfer between	f149 p4
+49218.49999956427	2303	Contact Info Transfer between	f149 p4
+49218.49999956427	2361	LER nd LT Info Transfer between	f149 p4
+49939.29999955378	2362	Contact Info Transfer between	f143 p23
+49939.29999955378	2363	Contact Info Transfer between	f143 p23
+49939.29999955378	2364	Contact Info Transfer between	f143 p23
+49939.29999955378	2365	Contact Info Transfer between	f143 p23
+49939.29999955378	2366	Contact Info Transfer between	f143 p23
+49939.29999955378	2367	Contact Info Transfer between	f143 p23
+49939.29999955378	2368	Contact Info Transfer between	f143 p23
+49939.29999955378	2369	Contact Info Transfer between	f143 p23
+49939.29999955378	2370	Contact Info Transfer between	f143 p23
+49939.29999955378	2371	Contact Info Transfer between	f143 p23
+49939.29999955378	2372	Contact Info Transfer between	f143 p23
+49939.29999955378	2373	Contact Info Transfer between	f143 p23
+49939.29999955378	2374	Contact Info Transfer between	f143 p23
+49939.29999955378	2375	Contact Info Transfer between	f143 p23
+49939.29999955378	2423	LER nd LT Info Transfer between	f143 p23
+49941.69999955375	2424	Contact Info Transfer between	f143 p23
+49941.69999955375	2425	Contact Info Transfer between	f143 p23
+49941.69999955375	2426	Contact Info Transfer between	f143 p23
+49941.69999955375	2427	Contact Info Transfer between	f143 p23
+49941.69999955375	2428	Contact Info Transfer between	f143 p23
+49941.69999955375	2429	Contact Info Transfer between	f143 p23
+49941.69999955375	2430	Contact Info Transfer between	f143 p23
+49941.69999955375	2431	Contact Info Transfer between	f143 p23
+49941.69999955375	2432	Contact Info Transfer between	f143 p23
+49941.69999955375	2433	Contact Info Transfer between	f143 p23
+49941.69999955375	2434	Contact Info Transfer between	f143 p23
+49941.69999955375	2435	Contact Info Transfer between	f143 p23
+49941.69999955375	2436	Contact Info Transfer between	f143 p23
+49941.69999955375	2437	Contact Info Transfer between	f143 p23
+49941.69999955375	2485	LER nd LT Info Transfer between	f143 p23
+50743.69999954208	2486	Contact Info Transfer between	f142 p15
+50743.69999954208	2487	Contact Info Transfer between	f142 p15
+50743.69999954208	2488	Contact Info Transfer between	f142 p15
+50743.69999954208	2489	Contact Info Transfer between	f142 p15
+50743.69999954208	2490	Contact Info Transfer between	f142 p15
+50743.69999954208	2491	Contact Info Transfer between	f142 p15
+50743.69999954208	2492	Contact Info Transfer between	f142 p15
+50743.69999954208	2493	Contact Info Transfer between	f142 p15
+50743.69999954208	2494	Contact Info Transfer between	f142 p15
+50743.69999954208	2495	Contact Info Transfer between	f142 p15
+50743.69999954208	2496	Contact Info Transfer between	f142 p15
+50743.69999954208	2497	Contact Info Transfer between	f142 p15
+50743.69999954208	2498	Contact Info Transfer between	f142 p15
+50743.69999954208	2499	Contact Info Transfer between	f142 p15
+50743.69999954208	2500	Contact Info Transfer between	f142 p15
+50743.69999954208	2501	Contact Info Transfer between	f142 p15
+50743.69999954208	2555	LER nd LT Info Transfer between	f142 p15
+53039.799999508665	2555	M36	Message Info Transfer between	f140 and m_s106
+53039.799999508665	2556	m_s106	MalNode Info Transfer between	f140 m_s106
+53284.19999950511	2557	Contact Info Transfer between	f141 w67
+53284.19999950511	2558	Contact Info Transfer between	f141 w67
+53284.19999950511	2559	Contact Info Transfer between	f141 w67
+53284.19999950511	2590	LER nd LT Info Transfer between	f141 w67
+53891.99999949626	2590	M490	Message Info Transfer between	f145 and m_s110
+55641.29999947081	2591	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2592	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2593	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2594	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2595	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2596	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2597	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2598	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2599	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2600	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2601	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2602	Contact Info Transfer between	f145 m_f124
+55641.29999947081	2666	LER nd LT Info Transfer between	f145 m_f124
+55641.29999947081	2667	m_f124	MalNode Info Transfer between	m_f124 f145
+56763.39999945448	2667	M199	Message Info Transfer between	f148 and m_s119
+56908.29999945237	2668	Contact Info Transfer between	f145 p23
+56908.29999945237	2669	Contact Info Transfer between	f145 p23
+56908.29999945237	2670	Contact Info Transfer between	f145 p23
+56908.29999945237	2671	Contact Info Transfer between	f145 p23
+56908.29999945237	2672	Contact Info Transfer between	f145 p23
+56908.29999945237	2673	Contact Info Transfer between	f145 p23
+56908.29999945237	2674	Contact Info Transfer between	f145 p23
+56908.29999945237	2675	Contact Info Transfer between	f145 p23
+56908.29999945237	2676	Contact Info Transfer between	f145 p23
+56908.29999945237	2677	Contact Info Transfer between	f145 p23
+56908.29999945237	2678	Contact Info Transfer between	f145 p23
+56908.29999945237	2679	Contact Info Transfer between	f145 p23
+56908.29999945237	2680	Contact Info Transfer between	f145 p23
+56908.29999945237	2681	Contact Info Transfer between	f145 p23
+56908.29999945237	2682	Contact Info Transfer between	f145 p23
+56908.29999945237	2735	LER nd LT Info Transfer between	f145 p23
+58070.39999943546	2735	M490	Message Info Transfer between	f141 and m_s110
+58875.79999942374	2735	M37	Message Info Transfer between	f148 and m_s118
+58875.79999942374	2736	m_s118	MalNode Info Transfer between	f148 m_s118
+60216.29999940423	2737	Contact Info Transfer between	f148 w61
+60216.29999940423	2738	Contact Info Transfer between	f148 w61
+60216.29999940423	2739	Contact Info Transfer between	f148 w61
+60216.29999940423	2740	Contact Info Transfer between	f148 w61
+60216.29999940423	2741	Contact Info Transfer between	f148 w61
+60216.29999940423	2742	Contact Info Transfer between	f148 w61
+60216.29999940423	2743	Contact Info Transfer between	f148 w61
+60216.29999940423	2744	Contact Info Transfer between	f148 w61
+60216.29999940423	2745	Contact Info Transfer between	f148 w61
+60216.29999940423	2746	Contact Info Transfer between	f148 w61
+60216.29999940423	2794	LER nd LT Info Transfer between	f148 w61
+60216.899999404224	2795	Contact Info Transfer between	f148 w61
+60216.899999404224	2796	Contact Info Transfer between	f148 w61
+60216.899999404224	2797	Contact Info Transfer between	f148 w61
+60216.899999404224	2798	Contact Info Transfer between	f148 w61
+60216.899999404224	2799	Contact Info Transfer between	f148 w61
+60216.899999404224	2800	Contact Info Transfer between	f148 w61
+60216.899999404224	2801	Contact Info Transfer between	f148 w61
+60216.899999404224	2802	Contact Info Transfer between	f148 w61
+60216.899999404224	2803	Contact Info Transfer between	f148 w61
+60216.899999404224	2804	Contact Info Transfer between	f148 w61
+60216.899999404224	2852	LER nd LT Info Transfer between	f148 w61
+60221.599999404156	2853	Contact Info Transfer between	f148 w61
+60221.599999404156	2854	Contact Info Transfer between	f148 w61
+60221.599999404156	2855	Contact Info Transfer between	f148 w61
+60221.599999404156	2856	Contact Info Transfer between	f148 w61
+60221.599999404156	2857	Contact Info Transfer between	f148 w61
+60221.599999404156	2858	Contact Info Transfer between	f148 w61
+60221.599999404156	2859	Contact Info Transfer between	f148 w61
+60221.599999404156	2860	Contact Info Transfer between	f148 w61
+60221.599999404156	2861	Contact Info Transfer between	f148 w61
+60221.599999404156	2862	Contact Info Transfer between	f148 w61
+60221.599999404156	2910	LER nd LT Info Transfer between	f148 w61
+60223.89999940412	2911	Contact Info Transfer between	f148 w61
+60223.89999940412	2912	Contact Info Transfer between	f148 w61
+60223.89999940412	2913	Contact Info Transfer between	f148 w61
+60223.89999940412	2914	Contact Info Transfer between	f148 w61
+60223.89999940412	2915	Contact Info Transfer between	f148 w61
+60223.89999940412	2916	Contact Info Transfer between	f148 w61
+60223.89999940412	2917	Contact Info Transfer between	f148 w61
+60223.89999940412	2918	Contact Info Transfer between	f148 w61
+60223.89999940412	2919	Contact Info Transfer between	f148 w61
+60223.89999940412	2920	Contact Info Transfer between	f148 w61
+60223.89999940412	2968	LER nd LT Info Transfer between	f148 w61
+120.0 60235: 477.58 1/s
+62795.199999366705	2969	Contact Info Transfer between	f143 p9
+62795.199999366705	2970	Contact Info Transfer between	f143 p9
+62795.199999366705	2971	Contact Info Transfer between	f143 p9
+62795.199999366705	2972	Contact Info Transfer between	f143 p9
+62795.199999366705	2973	Contact Info Transfer between	f143 p9
+62795.199999366705	2974	Contact Info Transfer between	f143 p9
+62795.199999366705	2975	Contact Info Transfer between	f143 p9
+62795.199999366705	2976	Contact Info Transfer between	f143 p9
+62795.199999366705	2977	Contact Info Transfer between	f143 p9
+62795.199999366705	2978	Contact Info Transfer between	f143 p9
+62795.199999366705	2979	Contact Info Transfer between	f143 p9
+62795.199999366705	2980	Contact Info Transfer between	f143 p9
+62795.199999366705	2981	Contact Info Transfer between	f143 p9
+62795.199999366705	2982	Contact Info Transfer between	f143 p9
+62795.199999366705	2983	Contact Info Transfer between	f143 p9
+62795.199999366705	3051	LER nd LT Info Transfer between	f143 p9
+62796.19999936669	3052	Contact Info Transfer between	f143 p9
+62796.19999936669	3053	Contact Info Transfer between	f143 p9
+62796.19999936669	3054	Contact Info Transfer between	f143 p9
+62796.19999936669	3055	Contact Info Transfer between	f143 p9
+62796.19999936669	3056	Contact Info Transfer between	f143 p9
+62796.19999936669	3057	Contact Info Transfer between	f143 p9
+62796.19999936669	3058	Contact Info Transfer between	f143 p9
+62796.19999936669	3059	Contact Info Transfer between	f143 p9
+62796.19999936669	3060	Contact Info Transfer between	f143 p9
+62796.19999936669	3061	Contact Info Transfer between	f143 p9
+62796.19999936669	3062	Contact Info Transfer between	f143 p9
+62796.19999936669	3063	Contact Info Transfer between	f143 p9
+62796.19999936669	3064	Contact Info Transfer between	f143 p9
+62796.19999936669	3065	Contact Info Transfer between	f143 p9
+62796.19999936669	3066	Contact Info Transfer between	f143 p9
+62796.19999936669	3134	LER nd LT Info Transfer between	f143 p9
+62796.89999936668	3135	Contact Info Transfer between	f143 p9
+62796.89999936668	3136	Contact Info Transfer between	f143 p9
+62796.89999936668	3137	Contact Info Transfer between	f143 p9
+62796.89999936668	3138	Contact Info Transfer between	f143 p9
+62796.89999936668	3139	Contact Info Transfer between	f143 p9
+62796.89999936668	3140	Contact Info Transfer between	f143 p9
+62796.89999936668	3141	Contact Info Transfer between	f143 p9
+62796.89999936668	3142	Contact Info Transfer between	f143 p9
+62796.89999936668	3143	Contact Info Transfer between	f143 p9
+62796.89999936668	3144	Contact Info Transfer between	f143 p9
+62796.89999936668	3145	Contact Info Transfer between	f143 p9
+62796.89999936668	3146	Contact Info Transfer between	f143 p9
+62796.89999936668	3147	Contact Info Transfer between	f143 p9
+62796.89999936668	3148	Contact Info Transfer between	f143 p9
+62796.89999936668	3149	Contact Info Transfer between	f143 p9
+62796.89999936668	3217	LER nd LT Info Transfer between	f143 p9
+62800.39999936663	3218	Contact Info Transfer between	f143 p9
+62800.39999936663	3219	Contact Info Transfer between	f143 p9
+62800.39999936663	3220	Contact Info Transfer between	f143 p9
+62800.39999936663	3221	Contact Info Transfer between	f143 p9
+62800.39999936663	3222	Contact Info Transfer between	f143 p9
+62800.39999936663	3223	Contact Info Transfer between	f143 p9
+62800.39999936663	3224	Contact Info Transfer between	f143 p9
+62800.39999936663	3225	Contact Info Transfer between	f143 p9
+62800.39999936663	3226	Contact Info Transfer between	f143 p9
+62800.39999936663	3227	Contact Info Transfer between	f143 p9
+62800.39999936663	3228	Contact Info Transfer between	f143 p9
+62800.39999936663	3229	Contact Info Transfer between	f143 p9
+62800.39999936663	3230	Contact Info Transfer between	f143 p9
+62800.39999936663	3231	Contact Info Transfer between	f143 p9
+62800.39999936663	3232	Contact Info Transfer between	f143 p9
+62800.39999936663	3300	LER nd LT Info Transfer between	f143 p9
+63043.199999363096	3301	Contact Info Transfer between	f146 p20
+63043.199999363096	3302	Contact Info Transfer between	f146 p20
+63043.199999363096	3303	Contact Info Transfer between	f146 p20
+63043.199999363096	3304	Contact Info Transfer between	f146 p20
+63043.199999363096	3305	Contact Info Transfer between	f146 p20
+63043.199999363096	3306	Contact Info Transfer between	f146 p20
+63043.199999363096	3307	Contact Info Transfer between	f146 p20
+63043.199999363096	3308	Contact Info Transfer between	f146 p20
+63043.199999363096	3309	Contact Info Transfer between	f146 p20
+63043.199999363096	3310	Contact Info Transfer between	f146 p20
+63043.199999363096	3311	Contact Info Transfer between	f146 p20
+63043.199999363096	3312	Contact Info Transfer between	f146 p20
+63043.199999363096	3313	Contact Info Transfer between	f146 p20
+63043.199999363096	3314	Contact Info Transfer between	f146 p20
+63043.199999363096	3315	Contact Info Transfer between	f146 p20
+63043.199999363096	3316	Contact Info Transfer between	f146 p20
+63043.199999363096	3368	LER nd LT Info Transfer between	f146 p20
+66099.49999935961	3368	M366	Message Info Transfer between	f144 and m_s118
+66310.69999937191	3369	Contact Info Transfer between	f142 w74
+66310.69999937191	3370	Contact Info Transfer between	f142 w74
+66310.69999937191	3371	Contact Info Transfer between	f142 w74
+66310.69999937191	3372	Contact Info Transfer between	f142 w74
+66310.69999937191	3373	Contact Info Transfer between	f142 w74
+66310.69999937191	3374	Contact Info Transfer between	f142 w74
+66310.69999937191	3375	Contact Info Transfer between	f142 w74
+66310.69999937191	3376	Contact Info Transfer between	f142 w74
+66310.69999937191	3377	Contact Info Transfer between	f142 w74
+66310.69999937191	3425	LER nd LT Info Transfer between	f142 w74
+66314.49999937213	3426	Contact Info Transfer between	f142 w74
+66314.49999937213	3427	Contact Info Transfer between	f142 w74
+66314.49999937213	3428	Contact Info Transfer between	f142 w74
+66314.49999937213	3429	Contact Info Transfer between	f142 w74
+66314.49999937213	3430	Contact Info Transfer between	f142 w74
+66314.49999937213	3431	Contact Info Transfer between	f142 w74
+66314.49999937213	3432	Contact Info Transfer between	f142 w74
+66314.49999937213	3433	Contact Info Transfer between	f142 w74
+66314.49999937213	3434	Contact Info Transfer between	f142 w74
+66314.49999937213	3482	LER nd LT Info Transfer between	f142 w74
+66389.19999937648	3482	M211	Message Info Transfer between	f145 and m_s100
+66389.19999937648	3483	m_s100	MalNode Info Transfer between	f145 m_s100
+66608.19999938922	3484	Contact Info Transfer between	f145 w67
+66608.19999938922	3485	Contact Info Transfer between	f145 w67
+66608.19999938922	3486	Contact Info Transfer between	f145 w67
+66608.19999938922	3487	Contact Info Transfer between	f145 w67
+66608.19999938922	3488	Contact Info Transfer between	f145 w67
+66608.19999938922	3489	Contact Info Transfer between	f145 w67
+66608.19999938922	3490	Contact Info Transfer between	f145 w67
+66608.19999938922	3531	LER nd LT Info Transfer between	f145 w67
+66610.49999938936	3532	Contact Info Transfer between	f145 w67
+66610.49999938936	3533	Contact Info Transfer between	f145 w67
+66610.49999938936	3534	Contact Info Transfer between	f145 w67
+66610.49999938936	3535	Contact Info Transfer between	f145 w67
+66610.49999938936	3536	Contact Info Transfer between	f145 w67
+66610.49999938936	3537	Contact Info Transfer between	f145 w67
+66610.49999938936	3538	Contact Info Transfer between	f145 w67
+66610.49999938936	3579	LER nd LT Info Transfer between	f145 w67
+67402.89999943548	3579	M17	Message Info Transfer between	f144 and m_s105
+68990.19999952787	3579	M225	Message Info Transfer between	f140 and m_s119
+70669.29999962561	3579	M187	Message Info Transfer between	f141 and m_s112
+71918.49999969832	3580	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3581	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3582	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3583	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3584	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3585	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3586	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3587	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3588	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3589	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3590	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3591	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3592	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3593	Contact Info Transfer between	f144 m_f135
+71918.49999969832	3667	LER nd LT Info Transfer between	f144 m_f135
+71918.49999969832	3668	m_f135	MalNode Info Transfer between	m_f135 f144
+72218.09999971576	3669	Contact Info Transfer between	f144 c52
+72218.09999971576	3670	Contact Info Transfer between	f144 c52
+72218.09999971576	3671	Contact Info Transfer between	f144 c52
+72218.09999971576	3672	Contact Info Transfer between	f144 c52
+72218.09999971576	3673	Contact Info Transfer between	f144 c52
+72218.09999971576	3674	Contact Info Transfer between	f144 c52
+72218.09999971576	3675	Contact Info Transfer between	f144 c52
+72218.09999971576	3676	Contact Info Transfer between	f144 c52
+72218.09999971576	3677	Contact Info Transfer between	f144 c52
+72218.09999971576	3829	LER nd LT Info Transfer between	f144 c52
+73212.89999977367	3829	M328	Message Info Transfer between	f148 and m_s117
+73212.89999977367	3830	m_s117	MalNode Info Transfer between	f148 m_s117
+76402.39999995932	3831	Contact Info Transfer between	f143 p16
+76402.39999995932	3832	Contact Info Transfer between	f143 p16
+76402.39999995932	3833	Contact Info Transfer between	f143 p16
+76402.39999995932	3834	Contact Info Transfer between	f143 p16
+76402.39999995932	3835	Contact Info Transfer between	f143 p16
+76402.39999995932	3836	Contact Info Transfer between	f143 p16
+76402.39999995932	3837	Contact Info Transfer between	f143 p16
+76402.39999995932	3838	Contact Info Transfer between	f143 p16
+76402.39999995932	3839	Contact Info Transfer between	f143 p16
+76402.39999995932	3840	Contact Info Transfer between	f143 p16
+76402.39999995932	3912	LER nd LT Info Transfer between	f143 p16
+76603.79999997104	3912	M17	Message Info Transfer between	f148 and m_s105
+77218.40000000682	3913	Contact Info Transfer between	f143 w56
+77218.40000000682	3914	Contact Info Transfer between	f143 w56
+77218.40000000682	3915	Contact Info Transfer between	f143 w56
+77218.40000000682	3916	Contact Info Transfer between	f143 w56
+77218.40000000682	3917	Contact Info Transfer between	f143 w56
+77218.40000000682	3918	Contact Info Transfer between	f143 w56
+77218.40000000682	3919	Contact Info Transfer between	f143 w56
+77218.40000000682	3920	Contact Info Transfer between	f143 w56
+77218.40000000682	3984	LER nd LT Info Transfer between	f143 w56
+78259.40000006741	3985	Contact Info Transfer between	f149 w67
+78259.40000006741	3986	Contact Info Transfer between	f149 w67
+78259.40000006741	3987	Contact Info Transfer between	f149 w67
+78259.40000006741	3988	Contact Info Transfer between	f149 w67
+78259.40000006741	3989	Contact Info Transfer between	f149 w67
+78259.40000006741	3990	Contact Info Transfer between	f149 w67
+78259.40000006741	3991	Contact Info Transfer between	f149 w67
+78259.40000006741	3992	Contact Info Transfer between	f149 w67
+78259.40000006741	3993	Contact Info Transfer between	f149 w67
+78259.40000006741	4042	LER nd LT Info Transfer between	f149 w67
+78618.90000008834	4042	M101	Message Info Transfer between	f141 and m_s109
+78713.20000009383	4043	Contact Info Transfer between	f149 p13
+78713.20000009383	4044	Contact Info Transfer between	f149 p13
+78713.20000009383	4045	Contact Info Transfer between	f149 p13
+78713.20000009383	4046	Contact Info Transfer between	f149 p13
+78713.20000009383	4047	Contact Info Transfer between	f149 p13
+78713.20000009383	4048	Contact Info Transfer between	f149 p13
+78713.20000009383	4049	Contact Info Transfer between	f149 p13
+78713.20000009383	4050	Contact Info Transfer between	f149 p13
+78713.20000009383	4051	Contact Info Transfer between	f149 p13
+78713.20000009383	4052	Contact Info Transfer between	f149 p13
+78713.20000009383	4122	LER nd LT Info Transfer between	f149 p13
+78716.100000094	4123	Contact Info Transfer between	f149 p13
+78716.100000094	4124	Contact Info Transfer between	f149 p13
+78716.100000094	4125	Contact Info Transfer between	f149 p13
+78716.100000094	4126	Contact Info Transfer between	f149 p13
+78716.100000094	4127	Contact Info Transfer between	f149 p13
+78716.100000094	4128	Contact Info Transfer between	f149 p13
+78716.100000094	4129	Contact Info Transfer between	f149 p13
+78716.100000094	4130	Contact Info Transfer between	f149 p13
+78716.100000094	4131	Contact Info Transfer between	f149 p13
+78716.100000094	4132	Contact Info Transfer between	f149 p13
+78716.100000094	4202	LER nd LT Info Transfer between	f149 p13
+79443.90000013636	4202	M116	Message Info Transfer between	f140 and m_s108
+79835.40000015915	4203	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4204	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4205	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4206	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4207	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4208	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4209	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4210	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4211	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4212	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4213	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4214	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4215	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4216	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4217	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4218	Contact Info Transfer between	f149 m_f134
+79835.40000015915	4290	LER nd LT Info Transfer between	f149 m_f134
+79835.40000015915	4291	m_f134	MalNode Info Transfer between	m_f134 f149
+81513.0000002568	4291	M77	Message Info Transfer between	f145 and m_s114
+82225.00000029824	4291	M101	Message Info Transfer between	f148 and m_s109
+180.0 84288: 400.88 1/s
+85784.50000050543	4292	Contact Info Transfer between	f147 p27
+85784.50000050543	4293	Contact Info Transfer between	f147 p27
+85784.50000050543	4294	Contact Info Transfer between	f147 p27
+85784.50000050543	4295	Contact Info Transfer between	f147 p27
+85784.50000050543	4296	Contact Info Transfer between	f147 p27
+85784.50000050543	4297	Contact Info Transfer between	f147 p27
+85784.50000050543	4298	Contact Info Transfer between	f147 p27
+85784.50000050543	4299	Contact Info Transfer between	f147 p27
+85784.50000050543	4300	Contact Info Transfer between	f147 p27
+85784.50000050543	4301	Contact Info Transfer between	f147 p27
+85784.50000050543	4302	Contact Info Transfer between	f147 p27
+85784.50000050543	4303	Contact Info Transfer between	f147 p27
+85784.50000050543	4304	Contact Info Transfer between	f147 p27
+85784.50000050543	4305	Contact Info Transfer between	f147 p27
+85784.50000050543	4306	Contact Info Transfer between	f147 p27
+85784.50000050543	4375	LER nd LT Info Transfer between	f147 p27
+86327.00000053701	4376	Contact Info Transfer between	f140 p13
+86327.00000053701	4377	Contact Info Transfer between	f140 p13
+86327.00000053701	4378	Contact Info Transfer between	f140 p13
+86327.00000053701	4379	Contact Info Transfer between	f140 p13
+86327.00000053701	4380	Contact Info Transfer between	f140 p13
+86327.00000053701	4381	Contact Info Transfer between	f140 p13
+86327.00000053701	4382	Contact Info Transfer between	f140 p13
+86327.00000053701	4383	Contact Info Transfer between	f140 p13
+86327.00000053701	4384	Contact Info Transfer between	f140 p13
+86327.00000053701	4385	Contact Info Transfer between	f140 p13
+86327.00000053701	4386	Contact Info Transfer between	f140 p13
+86327.00000053701	4463	LER nd LT Info Transfer between	f140 p13
+86330.50000053721	4464	Contact Info Transfer between	f140 p13
+86330.50000053721	4465	Contact Info Transfer between	f140 p13
+86330.50000053721	4466	Contact Info Transfer between	f140 p13
+86330.50000053721	4467	Contact Info Transfer between	f140 p13
+86330.50000053721	4468	Contact Info Transfer between	f140 p13
+86330.50000053721	4469	Contact Info Transfer between	f140 p13
+86330.50000053721	4470	Contact Info Transfer between	f140 p13
+86330.50000053721	4471	Contact Info Transfer between	f140 p13
+86330.50000053721	4472	Contact Info Transfer between	f140 p13
+86330.50000053721	4473	Contact Info Transfer between	f140 p13
+86330.50000053721	4474	Contact Info Transfer between	f140 p13
+86330.50000053721	4551	LER nd LT Info Transfer between	f140 p13
+86334.50000053745	4552	Contact Info Transfer between	f140 p13
+86334.50000053745	4553	Contact Info Transfer between	f140 p13
+86334.50000053745	4554	Contact Info Transfer between	f140 p13
+86334.50000053745	4555	Contact Info Transfer between	f140 p13
+86334.50000053745	4556	Contact Info Transfer between	f140 p13
+86334.50000053745	4557	Contact Info Transfer between	f140 p13
+86334.50000053745	4558	Contact Info Transfer between	f140 p13
+86334.50000053745	4559	Contact Info Transfer between	f140 p13
+86334.50000053745	4560	Contact Info Transfer between	f140 p13
+86334.50000053745	4561	Contact Info Transfer between	f140 p13
+86334.50000053745	4562	Contact Info Transfer between	f140 p13
+86334.50000053745	4639	LER nd LT Info Transfer between	f140 p13
+185.1 86400: 417.66 1/s
+Simulation done in 184.94s
+---
+All done in 185.99s
