@@ -1,0 +1,823 @@
+package routing;
+
+import java.util.*;
+
+import core.*;
+
+/**
+ * This class overrides ActiveRouter in order to inject calls to a 
+ * DecisionEngine object where needed add extract as much code from the update()
+ * method as possible. 
+ * 
+ * <strong>Forwarding Logic:</strong> 
+ * 
+ * A DecisionEngineRouter maintains a List of Tuple<Message, Connection> in 
+ * support of a call to ActiveRouter.tryMessagesForConnected() in 
+ * DecisionEngineRouter.update(). Since update() is called so frequently, we'd 
+ * like as little computation done in it as possible; hence the List that gets
+ * updated when events happen. Four events cause the List to be updated: a new 
+ * message from this host, a new received message, a connection goes up, or a 
+ * connection goes down. On a new message (either from this host or received 
+ * from a peer), the collection of open connections is examined to see if the
+ * message should be forwarded along them. If so, a new Tuple is added to the
+ * List. When a connection goes up, the collection of messages is examined to 
+ * determine to determine if any should be sent to this new peer, adding a Tuple
+ * to the list if so. When a connection goes down, any Tuple in the list
+ * associated with that connection is removed from the List.
+ * 
+ * <strong>Decision Engines</strong>
+ * 
+ * Most (if not all) routing decision making is provided by a 
+ * RoutingDecisionEngine object. The DecisionEngine Interface defines methods 
+ * that enact computation and return decisions as follows:
+ * 
+ * <ul>
+ *   <li>In createNewMessage(), a call to RoutingDecisionEngine.newMessage() is 
+ * 	 made. A return value of true indicates that the message should be added to
+ * 	 the message store for routing. A false value indicates the message should
+ *   be discarded.
+ *   </li>
+ *   <li>changedConnection() indicates either a connection went up or down. The
+ *   appropriate connectionUp() or connectionDown() method is called on the
+ *   RoutingDecisionEngine object. Also, on connection up events, this first
+ *   peer to call changedConnection() will also call
+ *   RoutingDecisionEngine.doExchangeForNewConnection() so that the two 
+ *   decision engine objects can simultaneously exchange information and update 
+ *   their routing tables (without fear of this method being called a second
+ *   time).
+ *   </li>
+ *   <li>Starting a Message transfer, a protocol first asks the neighboring peer
+ *   if it's okay to send the Message. If the peer indicates that the Message is
+ *   OLD or DELIVERED, call to RoutingDecisionEngine.shouldDeleteOldMessage() is
+ *   made to determine if the Message should be removed from the message store.
+ *   <em>Note: if tombstones are enabled or deleteDelivered is disabled, the 
+ *   Message will be deleted and no call to this method will be made.</em>
+ *   </li>
+ *   <li>When a message is received (in messageTransferred), a call to 
+ *   RoutingDecisionEngine.isFinalDest() to determine if the receiving (this) 
+ *   host is an intended recipient of the Message. Next, a call to 
+ *   RoutingDecisionEngine.shouldSaveReceivedMessage() is made to determine if
+ *   the new message should be stored and attempts to forward it on should be
+ *   made. If so, the set of Connections is examined for transfer opportunities
+ *   as described above.
+ *   </li>
+ *   <li> When a message is sent (in transferDone()), a call to 
+ *   RoutingDecisionEngine.shouldDeleteSentMessage() is made to ask if the 
+ *   departed Message now residing on a peer should be removed from the message
+ *   store.
+ *   </li>
+ * </ul>
+ * 
+ * <strong>Tombstones</strong>
+ * 
+ * The ONE has the the deleteDelivered option that lets a host delete a message
+ * if it comes in contact with the message's destination. More aggressive 
+ * approach lets a host remember that a given message was already delivered by
+ * storing the message ID in a list of delivered messages (which is called the
+ * tombstone list here). Whenever any node tries to send a message to a host 
+ * that has a tombstone for the message, the sending node receives the 
+ * tombstone.
+ * 
+ * @author PJ Dillon, University of Pittsburgh
+*/
+
+
+//Class to store the contents of the vertex in the format (node, utility_value)
+	
+class Node{
+	String node_name;
+	int ut_value;
+	
+	Node(String host, int tau_calculated){
+		this.node_name = host;
+		this.ut_value = tau_calculated;
+	}
+}
+
+
+//Class to store the neighbours of each vertex in the linked list format
+
+
+class Vertex{
+	double t;
+	LinkedList<Node> vrtx = new LinkedList<Node>();	
+	Vertex(Node n,double time){
+		vrtx.add(n);
+		t=time;
+	}
+	
+}
+
+//Class for the graph data structure in a HashMap<int,Vertex> form
+
+
+
+class Graph{
+	HashMap<String,Vertex> graph = new HashMap<String,Vertex>();
+	
+	
+	public double get_t(DTNHost host1, DTNHost host2){
+		if(graph.containsKey(host1.toString())){
+			Vertex vtx=graph.get(host1.toString());
+			int len= vtx.vrtx.size();
+			for(int i=0;i<len;i++){
+				if(vtx.vrtx.get(i).node_name==host2.toString())
+					return vtx.t;
+			}		
+		}
+		return 0.0;
+	}
+	
+	// Function to add a new edge to the graph.
+
+	
+	public void addEdge(String u, String v, int w){
+		Node n1 = new Node(u,w);
+		Node n2 = new Node(v,w);
+		String u1 = u;
+		String v1 = v;
+		SimClock time = new SimClock();
+		int thistime = time.getIntTime();
+		if(!graph.containsKey(u1)){
+			Vertex neighbour = new Vertex(n2,thistime);
+			graph.put(u1,neighbour);
+		}
+		else{
+			Vertex neighbour = graph.get(u1);
+			neighbour.vrtx.add(n2);
+			graph.put(u1,neighbour);
+		}
+	
+		if(!graph.containsKey(v1)){
+			Vertex neighbour = new Vertex(n1,thistime);
+			graph.put(v1,neighbour);
+		}
+		else{ 
+			Vertex neighbour = graph.get(v1);
+			neighbour.vrtx.add(n1);
+			graph.put(v1,neighbour);
+		}
+	}
+	
+	/*public static <CTT, Vertex> CTT getKeyByValue(Map<CTT, Vertex> map, Vertex value) {
+    	  	for (Entry<CTT, Vertex> entry : map.entrySet()) {
+        		if (value.equals(entry.getValue())) {
+            			return entry.getKey();
+        		}
+    		}
+    	  return null;
+    	  };
+ 
+	}*/
+}
+
+	
+public class DecisionEngineRouter extends ActiveRouter
+{
+	public static final String PUBSUB_NS = "DecisionEngineRouter";
+	public static final String ENGINE_SETTING = "decisionEngine";
+	public static final String TOMBSTONE_SETTING = "tombstones";
+	public static final String CONNECTION_STATE_SETTING = "";
+	public static final String COPY_COUNT_PROP = "SprayAndFocus.copies";
+	
+	protected boolean tombstoning;
+	protected RoutingDecisionEngine decider;
+	protected List<Tuple<Message, Connection>> outgoingMessages;
+	
+	protected Set<String> tombstones;
+	
+	Graph CT = new Graph();
+	Graph tau_vector = new Graph();
+	
+	/** 
+	 * Used to save state machine when new connections are made. See comment in
+	 * changedConnection() 
+	 */
+	protected Map<Connection, Integer> conStates;
+	
+	public DecisionEngineRouter(Settings s)
+	{
+		super(s);
+		
+		Settings routeSettings = new Settings(PUBSUB_NS);
+		
+		outgoingMessages = new LinkedList<Tuple<Message, Connection>>();
+		
+		decider = (RoutingDecisionEngine)routeSettings.createIntializedObject(
+				"routing." + routeSettings.getSetting(ENGINE_SETTING));
+		
+		if(routeSettings.contains(TOMBSTONE_SETTING))
+			tombstoning = routeSettings.getBoolean(TOMBSTONE_SETTING);
+		else
+			tombstoning = false;
+		
+		if(tombstoning)
+			tombstones = new HashSet<String>(10);
+		conStates = new HashMap<Connection, Integer>(4);
+		
+	}
+
+	public DecisionEngineRouter(DecisionEngineRouter r)
+	{
+		super(r);
+		outgoingMessages = new LinkedList<Tuple<Message, Connection>>();
+		decider = r.decider.replicate();
+		tombstoning = r.tombstoning;
+		
+		if(this.tombstoning)
+			tombstones = new HashSet<String>(10);
+		conStates = new HashMap<Connection, Integer>(4);
+	}
+
+	@Override
+	public MessageRouter replicate()
+	{
+		return new DecisionEngineRouter(this);
+	}
+
+	@Override
+	public boolean createNewMessage(Message m)
+	{
+		if(decider.newMessage(m))
+		{
+			makeRoomForNewMessage(m.getSize());
+			addToMessages(m, true);
+			
+			findConnectionsForNewMessage(m, getHost());
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public void changedConnection(Connection con)
+	{
+		DTNHost myHost = getHost();
+		DTNHost otherNode = con.getOtherNode(myHost);
+		MessageRouter mRouter = otherNode.getRouter();
+		DecisionEngineRouter otherRouter = (DecisionEngineRouter)otherNode.getRouter();
+		if(con.isUp())
+		{
+			decider.connectionUp(myHost, otherNode);
+			//if(myHost.ferry==1)				
+			setcon(myHost, otherNode);
+				
+			
+			/*
+			 * This part is a little confusing because there's a problem we have to
+			 * avoid. When a connection comes up, we're assuming here that the two 
+			 * hosts who are now connected will exchange some routing information and
+			 * update their own based on what the get from the peer. So host A updates
+			 * its routing table with info from host B, and vice versa. In the real
+			 * world, A would send its *old* routing information to B and compute new
+			 * routing information later after receiving B's *old* routing information.
+			 * In ONE, changedConnection() is called twice, once for each host A and
+			 * B, in a serial fashion. If it's called for A first, A uses B's old info
+			 * to compute its new info, but B later uses A's *new* info to compute its
+			 * new info.... and this can lead to some nasty problems. 
+			 * 
+			 * To combat this, whichever host calls changedConnection() first calls
+			 * doExchange() once. doExchange() interacts with the DecisionEngine to
+			 * initiate the exchange of information, and it's assumed that this code
+			 * will update the information on both peers simultaneously using the old
+			 * information from both peers.
+			 */
+			if(shouldNotifyPeer(con))
+			{
+				this.doExchange(con, otherNode);
+				otherRouter.didExchange(con);
+			}
+		
+			/*
+			 * Once we have new information computed for the peer, we figure out if
+			 * there are any messages that should get sent to this peer.
+			 */
+			Collection<Message> msgs = getMessageCollection();
+			int test1 = 0;
+			for(int p = 0; p<myHost.malnode_cnt; p++){
+				if(myHost.malnode[p]==otherNode){
+					test1 = 1;
+					break;
+				}
+			}
+			if(test1 == 0){
+				for(Message m : msgs)
+				{
+					if(decider.shouldSendMessageToHost(m, otherNode, myHost))
+						outgoingMessages.add(new Tuple<Message,Connection>(m, con));
+				}
+			}
+		}
+		else
+		{
+			decider.connectionDown(myHost, otherNode);
+			
+			conStates.remove(con);
+		
+			/*
+			 * If we  were trying to send message to this peer, we need to remove them
+			 * from the outgoing List.
+			 */
+			for(Iterator<Tuple<Message,Connection>> i = outgoingMessages.iterator(); 
+					i.hasNext();)
+			{
+				Tuple<Message, Connection> t = i.next();
+				if(t.getValue() == con)
+					i.remove();
+			}
+		}
+	}
+	
+/**
+	 * host1 checks if it has interacted with host2 or not, both modifies its value according to their previous interaction with other nodes.
+	 */
+	
+			
+	public void setcon(DTNHost host1, DTNHost host2)			
+	{
+		int chk1 = 0, chk2 = 0;
+		int i,j;
+		SimClock time = new SimClock();
+		int thistime = time.getIntTime();
+		host1.tau_utl[host2.nodenumber] = 0;				
+		host2.tau_utl[host1.nodenumber] = 0;
+		for(int p = 0; p<host1.nodecount; p++){
+			if(host1.connected_nodes[p] == host2)
+				chk1 = 1;
+		}
+		if(chk1 == 0)
+			host1.connected_nodes[host1.nodecount++] = host2;
+		for(int q = 0; q<host2.nodecount; q++){
+			if(host2.connected_nodes[q] == host1)
+				chk2 = 1;
+		}
+		
+		if(chk2 == 0)
+			host2.connected_nodes[host2.nodecount++] = host1; 
+		for(i = 0; i<host2.nodecount-1; i++){
+			host2.tau_utl[host2.connected_nodes[i].nodenumber] = thistime - host2.tau_brk[host2.connected_nodes[i].nodenumber];
+			host2.connected_nodes[i].tau_utl[host2.nodenumber] = host2.tau_utl[host2.connected_nodes[i].nodenumber];
+		}
+		if(host2.ferry != 1){
+			String H=host1.toString()+host2.toString();
+			String G=host2.toString()+host1.toString();
+			host2.LT.put(H,thistime);
+			host2.LT.put(G,thistime);
+			if(host1.ferry != 1){
+				host1.LT.put(H,thistime);
+				host1.LT.put(G,thistime);
+			}
+		}
+	}
+	
+	
+	public boolean testmalicious(Message m, DTNHost otherHost, DTNHost from){
+		int i,j,k;
+		int tau_stated, tau_calc = 0, f_tau_calc=0,tau_calc2 = 0;
+		int enc_time;
+		double dec_tau=0;
+		DTNHost host1 = from;
+		DTNHost host2 = otherHost;
+		SimClock time = new SimClock();
+		int thistime = time.getIntTime();
+		if(otherHost.malnode_focus==1){
+			tau_stated = (otherHost.tau_utl[m.getTo().nodenumber])-1;
+		}
+		else{
+			tau_stated = (otherHost.tau_utl[m.getTo().nodenumber]);
+		}
+		
+		String host = host1.toString()+host2.toString(); //TO CHANGE
+		String T = host2.toString()+host1.toString(); 
+
+		enc_time= host2.LT.get(host);
+		if(host2.LT.get(host)==host2.LT.get(T)){
+			host1.LER.put(host,thistime);
+			host2.LT.remove(host);
+		}
+		else{ 
+			if(host2.LT.get(host)>host2.LT.get(T)){
+				host2.LT.remove(host);
+				host1.LER.put(host,thistime);
+				host1.modmalicious=1;
+				//getHost().malnode[malnode_cnt++]= host1;
+			}
+			else if(host2.LT.get(host)<host2.LT.get(T)){
+				host2.LT.remove(host);
+				host1.LER.put(host,enc_time);
+				otherHost.modmalicious=1;
+				//getHost().malnode[malnode_cnt++]= host2;
+				return true;
+			}
+		}
+		
+		for(int z=0; z<=host2.nodecount-1;z++){
+			String local_host = host2.toString()+host2.connected_nodes[z].toString(); //TO CHANGE
+			String local_T = host2.connected_nodes[z].toString()+host2.toString();
+			enc_time= host2.LT.get(local_host);
+			if(host2.LT.get(local_host)==host2.LT.get(local_T)){
+				host1.LER.put(local_host,thistime);
+				host2.LT.remove(local_host);
+			}
+			else{ 
+				if(host2.LT.get(local_host)>host2.LT.get(local_T)){
+					host2.LT.remove(local_host);
+					host1.LER.put(local_host,thistime);
+					host1.modmalicious=1;
+					//getHost().malnode[malnode_cnt++]= host1;
+				}
+				else if(host2.LT.get(local_host)<host2.LT.get(local_T)){
+					host2.LT.remove(local_host);
+					host1.LER.put(local_host,enc_time);
+					otherHost.modmalicious=1;
+					//getHost().malnode[malnode_cnt++]= host2;
+					return true;
+				}
+			}
+		}
+		String ot_host =host1.toString()+host2.toString(); 
+		int enc_time2;
+		if(host1.LER.get(ot_host)!=null){
+			enc_time2= host1.LER.get(ot_host);
+		}
+		else{
+			enc_time2=0;
+		}	
+
+		if(enc_time2<=thistime){
+			host1.LER.put(host,thistime);
+			host1.modmalicious=1;
+			for(i = 0; i<host1.nodecount-1; i++){			 	
+	
+				if(host1.tau_utl[host1.connected_nodes[i].nodenumber] > otherHost.tau_utl[host1.connected_nodes[i].nodenumber]){
+					host1.tau_utl[host1.connected_nodes[i].nodenumber] = otherHost.tau_utl[host1.connected_nodes[i].nodenumber];
+				}
+				else{
+					otherHost.tau_utl[host1.connected_nodes[i].nodenumber] = host1.tau_utl[host1.connected_nodes[i].nodenumber];
+				}
+			}
+
+			for(i = 0; i<otherHost.nodecount-1; i++){
+				if(otherHost.tau_utl[otherHost.connected_nodes[i].nodenumber] > host1.tau_utl[otherHost.connected_nodes[i].nodenumber]){
+					otherHost.tau_utl[otherHost.connected_nodes[i].nodenumber] = host1.tau_utl[otherHost.connected_nodes[i].nodenumber];
+				}
+				else{
+					host1.tau_utl[otherHost.connected_nodes[i].nodenumber] = otherHost.tau_utl[otherHost.connected_nodes[i].nodenumber];
+				}
+			}
+		}	
+		
+		tau_calc = otherHost.tau_utl[m.getTo().nodenumber];
+		tau_calc2 = host1.tau_utl[m.getTo().nodenumber];
+		
+		//System.out.println("hello");
+
+		for(i = 0; i<host1.nodecount-1; i++){	
+			for(j = 0; j<otherHost.nodecount-1; j++){			
+				tau_vector.addEdge(host1.toString(),host1.connected_nodes[i].toString(),tau_calc2);
+				tau_vector.addEdge(otherHost.toString(),otherHost.connected_nodes[i].toString(),tau_calc);				
+				/*System.out.println(host1.toString());
+				System.out.println(host1.connected_nodes[i].toString());
+				System.out.println(otherHost.toString());
+				System.out.println(otherHost.connected_nodes[i].toString());
+				System.out.println(tau_calc);
+				System.out.println(tau_calc2);*/
+			}
+		}
+//---------------------------------------------------------------------------------------------
+		/*for(i = 0; i<host2.nodecount-1; i++){
+			DTNHost tmp_host=host2.connected_nodes[i];
+			tau_vector.addEdge(tmp_host.toString(),host2.toString(),host2.tau_utl[host2.connected_nodes[i].nodenumber]);
+			System.out.println(tau_vector.get_t(tmp_host,host2));
+		}*/
+
+
+		//CASE 2---------------------------------------------------------------------------------------			
+		for(i=0;i<host1.nodecount-1;i++){
+			DTNHost tmp_host1 = host1.connected_nodes[i];
+			for(j=0;j<otherHost.nodecount-1;j++){
+				DTNHost tmp_host2 = otherHost.connected_nodes[j];
+				String ij = tmp_host1.toString() + tmp_host2.toString();
+				System.out.println(host2.LT);
+				System.out.println(host1.LER);
+				System.out.println(ij);
+				if((host2.LT.get(ij)!=null)&&(host1.LER.get(ij)!=null)){
+					dec_tau=thistime-host2.LT.get(ij);
+					if(host1.LER.get(ij) >= tau_vector.get_t(tmp_host1,tmp_host2)){
+						f_tau_calc = thistime-host1.LER.get(ij);
+					}
+					else if(host1.LER.get(ij) < tau_vector.get_t(tmp_host1,tmp_host2)){
+						f_tau_calc = thistime-host1.LER.get(ij);
+					}
+				}
+				else{
+					System.out.println("wrong turn");
+					dec_tau=0;						
+				}
+			}
+			if(dec_tau-f_tau_calc!=0){
+				otherHost.modmalicious=1;
+			}
+			else{
+				continue;
+			}
+		}
+		if(tau_stated < f_tau_calc){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	protected void doExchange(Connection con, DTNHost otherHost)
+	{
+		conStates.put(con, 1);
+		decider.doExchangeForNewConnection(con, otherHost);
+	}
+	
+	/**
+	 * Called by a peer DecisionEngineRouter to indicated that it already 
+	 * performed an information exchange for the given connection.
+	 * 
+	 * @param con Connection on which the exchange was performed
+	 */
+	protected void didExchange(Connection con)
+	{
+		conStates.put(con, 1);
+	}
+	@Override
+	public void deleteAckedMessages() {
+		for (String id : this.ackedMessageIds) {
+			if (this.hasMessage(id) && !isSending(id)) {
+				this.deleteMessage(id, false);
+			}
+		}
+	}
+	
+	@Override
+	protected int startTransfer(Message m, Connection con)
+	{
+		int retVal;
+		
+		if (!con.isReadyForTransfer()) {
+			return TRY_LATER_BUSY;
+		}
+		
+		retVal = con.startTransfer(getHost(), m);
+		if (retVal == RCV_OK) { // started transfer
+			addToSendingConnections(con);
+		}
+		else if(tombstoning && retVal == DENIED_DELIVERED)
+		{
+			this.deleteMessage(m.getId(), false);
+			tombstones.add(m.getId());
+		}
+		else if (deleteDelivered && (retVal == DENIED_OLD || retVal == DENIED_DELIVERED) && 
+				decider.shouldDeleteOldMessage(m, con.getOtherNode(getHost()))) {
+			/* final recipient has already received the msg -> delete it */
+			this.deleteMessage(m.getId(), false);
+		}
+		
+		return retVal;
+	}
+
+	@Override
+	public int receiveMessage(Message m, DTNHost from)
+	{
+		if(isDeliveredMessage(m) || (tombstoning && tombstones.contains(m.getId())))
+			return DENIED_DELIVERED;
+			
+		return super.receiveMessage(m, from);
+	}
+
+	@Override
+	public Message messageTransferred(String id, DTNHost from)
+	{
+		Message incoming = removeFromIncomingBuffer(id, from);
+	
+		if (incoming == null) {
+			throw new SimError("No message with ID " + id + " in the incoming "+
+					"buffer of " + getHost());
+		}
+		
+		incoming.setReceiveTime(SimClock.getTime());
+		
+		Message outgoing = incoming;
+		for (Application app : getApplications(incoming.getAppID())) {
+			// Note that the order of applications is significant
+			// since the next one gets the output of the previous.
+			outgoing = app.handle(outgoing, getHost());
+			if (outgoing == null) break; // Some app wanted to drop the message
+		}
+		
+		Message aMessage = (outgoing==null)?(incoming):(outgoing);
+		
+		boolean isFinalRecipient = decider.isFinalDest(aMessage, getHost());
+		boolean isFirstDelivery =  isFinalRecipient && 
+			!isDeliveredMessage(aMessage);
+		
+		if (outgoing!=null && decider.shouldSaveReceivedMessage(aMessage, getHost())) 
+		{
+			// not the final recipient and app doesn't want to drop the message
+			// -> put to buffer
+			addToMessages(aMessage, false);
+			
+			// Determine any other connections to which to forward a message
+			findConnectionsForNewMessage(aMessage, from);
+		}
+		
+		if (isFirstDelivery)
+		{
+			this.deliveredMessages.put(id, aMessage);
+		}
+		
+		for (MessageListener ml : this.mListeners) {
+			ml.messageTransferred(aMessage, from, getHost(),
+					isFirstDelivery);
+		}
+		
+		return aMessage;
+	}
+
+	@Override
+	protected void transferDone(Connection con)
+	{
+		Message transferred = this.getMessage(con.getMessage().getId());
+		if(transferred == null) return;
+		for(Iterator<Tuple<Message, Connection>> i = outgoingMessages.iterator(); 
+		i.hasNext();)
+		{
+
+			Tuple<Message, Connection> t = i.next();
+			
+			if(t.getKey().getId().equals(transferred.getId()) && 
+					t.getValue().equals(con))
+			{
+				i.remove();
+				break;
+			}
+		}
+		if(decider.shouldDeleteSentMessage(transferred, con.getOtherNode(getHost())))
+		{
+			this.deleteMessage(transferred.getId(), false);
+			
+			for(Iterator<Tuple<Message, Connection>> i = outgoingMessages.iterator(); 
+			i.hasNext();)
+			{
+				Tuple<Message, Connection> t = i.next();
+				if(t.getKey().getId().equals(transferred.getId()))
+				{
+					i.remove();
+				}
+			}
+		}
+	}
+
+	@Override
+	public void update()
+	{
+		super.update();
+		if (!canStartTransfer() || isTransferring()) {
+			return; // nothing to transfer or is currently transferring 
+		}
+		tryMessagesForConnected(outgoingMessages);
+	
+		for(Iterator<Tuple<Message, Connection>> i = outgoingMessages.iterator(); 
+		i.hasNext();)
+		{
+			Tuple<Message, Connection> t = i.next();
+			if(!this.hasMessage(t.getKey().getId()))
+			{
+				i.remove();
+			}
+		}
+	}
+	
+	public RoutingDecisionEngine getDecisionEngine()
+	{
+		return this.decider;
+	}
+
+	protected boolean shouldNotifyPeer(Connection con)
+	{
+		Integer i = conStates.get(con);
+		return i == null || i < 1;
+	}
+	
+	protected void findConnectionsForNewMessage(Message m, DTNHost from)
+	{
+		for(Connection c : getConnections())
+		{
+			int i,j, chk, test1 = 0, test2 = 0;
+			DTNHost other = c.getOtherNode(getHost());
+			for(i = 0; i<from.malnode_cnt;i++){
+				if(from.malnode[i] == other)
+					test1 = 1;
+			}
+			if(test1 == 0){
+				for(i = 0; i<from.malnode_cnt; i++){
+					chk = 0;
+					for(j = 0; j<other.malnode_cnt; j++){
+						if(from.malnode[i]==other.malnode[j]){
+							chk=1;
+							break;
+						}
+					}
+					if(chk==0)
+						other.malnode[other.malnode_cnt++] = from.malnode[i];
+				}
+			}
+			if(test2 == 0){
+				for(i = 0; i<other.malnode_cnt; i++){
+					chk = 0;
+					for(j = 0; j<from.malnode_cnt; j++){
+						if(other.malnode[i]==from.malnode[j]){
+							chk=1;
+							break;
+						}
+					}
+					if(chk==0){
+						from.malnode[from.malnode_cnt++] = other.malnode[i];
+					}
+				}
+			}
+			if((Integer)m.getProperty(COPY_COUNT_PROP)==1 && getHost().ferry == 1 && other.ferry!= 1){
+				
+				boolean mal_test = testmalicious(m, other, getHost());
+				if(mal_test){
+					System.out.println(other.toString() + " is malicious");
+					int chk1 = 0;
+					for(j = 0; j<from.malnode_cnt; j++){
+						if(from.malnode[j]==other){
+							chk1=1;
+							break;
+						}
+					}
+					if(chk1 == 0){
+						from.malnode[from.malnode_cnt++] = other;
+					}
+					addmalicious(from);
+				}
+			}
+			int test = 0;
+			for(int q = 0; q<from.malnode_cnt; q++){
+				if(from.malnode[q]==other){
+					test = 1;
+					break;
+				}
+			}
+			if(test == 0){
+				if(other != from && decider.shouldSendMessageToHost(m, other, from))
+				{
+					outgoingMessages.add(new Tuple<Message, Connection>(m, c));
+				}
+			}
+		}
+	}
+	public void addmalicious(DTNHost from){
+		for(Connection c : getConnections()){
+			int i,j,chk, test1 = 0, test2 = 0;
+			DTNHost other = c.getOtherNode(getHost());
+			for(i = 0; i<from.malnode_cnt;i++){
+				if(from.malnode[i] == other)
+					test1 = 1;
+			}
+			if(test1 == 0){
+				for(i = 0; i<from.malnode_cnt; i++){
+					chk = 0;
+					for(j = 0; j<other.malnode_cnt; j++){
+						if(from.malnode[i]==other.malnode[j]){
+							chk=1;
+							break;
+						}
+					}
+					if(chk==0){
+						other.maloverhead++;
+						other.malnode[other.malnode_cnt++] = from.malnode[i];
+					}
+				}
+			}
+			for(i = 0; i<other.malnode_cnt;i++){
+				if(other.malnode[i] == from)
+					test2 = 1;
+			}
+			if(test2 == 0){
+				for(i = 0; i<other.malnode_cnt; i++){
+					chk = 0;
+					for(j = 0; j<from.malnode_cnt; j++){
+						if(other.malnode[i]==from.malnode[j]){
+							chk=1;
+							break;
+						}
+					}
+					if(chk==0){
+						from.maloverhead++;
+						from.malnode[from.malnode_cnt++] = other.malnode[i];
+					}
+				}
+			}
+		}
+	}
+}
+
