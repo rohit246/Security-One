@@ -1,0 +1,50 @@
+m_f123 is focus malicious
+m_s112 is spray malicious
+m_s104 is spray malicious
+m_s103 is spray malicious
+m_f136 is focus malicious
+m_f129 is focus malicious
+f141 is ferry
+m_f128 is focus malicious
+f145 is ferry
+m_f135 is focus malicious
+m_s116 is spray malicious
+m_s117 is spray malicious
+m_s108 is spray malicious
+m_s109 is spray malicious
+m_f133 is focus malicious
+m_f138 is focus malicious
+m_s107 is spray malicious
+m_s105 is spray malicious
+f144 is ferry
+m_f122 is focus malicious
+m_f121 is focus malicious
+m_s100 is spray malicious
+m_f125 is focus malicious
+f147 is ferry
+m_f134 is focus malicious
+m_f127 is focus malicious
+m_s106 is spray malicious
+m_s101 is spray malicious
+m_s111 is spray malicious
+m_s119 is spray malicious
+m_f137 is focus malicious
+m_f130 is focus malicious
+m_s110 is spray malicious
+f140 is ferry
+m_f120 is focus malicious
+m_f132 is focus malicious
+m_s113 is spray malicious
+m_s114 is spray malicious
+m_f124 is focus malicious
+f146 is ferry
+m_s118 is spray malicious
+m_s102 is spray malicious
+f149 is ferry
+f148 is ferry
+m_s115 is spray malicious
+m_f126 is focus malicious
+f142 is ferry
+m_f131 is focus malicious
+f143 is ferry
+m_f139 is focus malicious

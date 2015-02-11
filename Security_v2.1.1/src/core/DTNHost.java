@@ -25,6 +25,7 @@ public class DTNHost implements Comparable<DTNHost> {
 	public static final String FERRY = "Group.ferry_tag";
 	public static final String FOCUS = "Group.focus_tag";
 	public static final String SPRAY = "Group.spray_tag";
+        public static final String MAL_PERCENT = "Group.malicious_percent";
 	
 	public MessageRouter router;
 	private MovementModel movement;
@@ -82,6 +83,7 @@ public class DTNHost implements Comparable<DTNHost> {
 	public int maloverhead = 0;
 	public int malchk = 0;
 	public int modmalicious = 0;
+        public double malPercent = 1.0;
 	
 	
 	//Encounter Info
@@ -115,6 +117,7 @@ public class DTNHost implements Comparable<DTNHost> {
 		ferry_tag = sata.getSetting(FERRY);
 		focus_tag = sata.getSetting(FOCUS);
 		spray_tag = sata.getSetting(SPRAY);
+                malPercent = sata.getDouble(MAL_PERCENT);
 		this.comBus = comBus;
 		this.location = new Coord(0,0);
 		this.address = getNextAddress();

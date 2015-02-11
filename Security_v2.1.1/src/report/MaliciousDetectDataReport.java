@@ -118,7 +118,7 @@ public class MaliciousDetectDataReport extends Report
 		Message msg1 = null;
 		int st_size = host2.spray_table.size();
 		if(host2.malnode_spray == 1 && st_size > 0
-                        && MaliciousDecisionEngine.DecideMaliciousness(0.5)){
+                        && MaliciousDecisionEngine.DecideMaliciousness(host2.malPercent)){
 			msg1 = host2.spray_table.get(st_size - 1).msg;
 			
 			//host2.spray_table_msgsize[host2.rowcount] = 0;
