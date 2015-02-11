@@ -49,24 +49,21 @@ public class CBRConnection extends Connection {
 		"start transfer of " + m + " from " + from;
 
 		this.msgFromNode = from;
-		if(from.malnode_spray == 0){
-			Message newMessage = m.replicate();
-			int retVal = getOtherNode(from).receiveMessage(newMessage, from);
-	
-			if (retVal == MessageRouter.RCV_OK) {
-				this.msgOnFly = newMessage;
-				if(from.modname.startsWith("SAT")){
-					this.transferDoneTime = SimClock.getTime() + 
-					((1.0*m.getSize()) / this.speed) + (2*(360/this.speed));
-				}
-				else{
-					this.transferDoneTime = SimClock.getTime() + 
-					((1.0*m.getSize()) / this.speed);
-				}				
-			}
-			return retVal;
-		}
-		return -1;
+                Message newMessage = m.replicate();
+                int retVal = getOtherNode(from).receiveMessage(newMessage, from);
+
+                if (retVal == MessageRouter.RCV_OK) {
+                        this.msgOnFly = newMessage;
+                        if(from.modname.startsWith("SAT")){
+                                this.transferDoneTime = SimClock.getTime() + 
+                                ((1.0*m.getSize()) / this.speed) + (2*(360/this.speed));
+                        }
+                        else{
+                                this.transferDoneTime = SimClock.getTime() + 
+                                ((1.0*m.getSize()) / this.speed);
+                        }				
+                }
+                return retVal;
 	}
 
 	/**

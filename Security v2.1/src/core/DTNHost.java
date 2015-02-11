@@ -505,11 +505,7 @@ public class DTNHost implements Comparable<DTNHost> {
 	 * @param to Host the message should be sent to
 	 */
 	public void sendMessage(String id, DTNHost to) {
-		if(this.malnode_spray == 0){
-			this.router.sendMessage(id, to);
-		}
-		else
-			this.router.deleteMessage(id,true);
+            this.router.sendMessage(id, to);
 	}
 
 	/**
@@ -576,10 +572,7 @@ public class DTNHost implements Comparable<DTNHost> {
 	 * way the removing is reported to the message listeners.
 	 */
 	public void deleteMessage(String id, boolean drop) {
-		if(this.malnode_spray == 0)
-			this.router.deleteMessage(id, drop);
-		else
-			this.router.deleteMessage(id, true);
+            this.router.deleteMessage(id, drop);
 	}
 
 	/**
