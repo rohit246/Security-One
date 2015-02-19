@@ -1,0 +1,169 @@
+## Scenario settings
+Scenario.name = default_scenario
+Scenario.simulateConnections = true
+Scenario.updateInterval = 0.1
+# 43200s == 12h
+Scenario.endTime = 20000	
+
+# "Bluetooth" interface for all nodes
+btInterface.type = SimpleBroadcastInterface
+# Transmit speed of 2 Mbps = 250kBps
+btInterface.transmitSpeed = 250k
+btInterface.transmitRange = 10
+
+# High speed, long range, interface for group 4
+highspeedInterface.type = SimpleBroadcastInterface
+highspeedInterface.transmitSpeed = 10M
+highspeedInterface.transmitRange = 1000
+
+# Define 6 different node groups
+Scenario.nrofHostGroups = 9
+
+############ Security Specific Settings #################
+
+Group.ferry_tag = f
+Group.focus_tag = m_f
+Group.spray_tag = m_s
+Group.malicious_percent_spray = 0.5
+Group.malicious_percent_focus = 0.0
+#ExternalMovement.file = External_Movement_new.txt
+########################################################
+
+# Common settings for all groups
+Group.movementModel = ShortestPathMapBasedMovement
+Group.router = DecisionEngineRouter
+Group.bufferSize = 2000M
+Group.waitTime = 0, 120
+# All nodes have the bluetooth interface
+Group.nrofInterfaces = 1
+Group.interface1 = btInterface
+# Walking speeds
+Group.speed = 0.5, 1.5
+# Message TTL of 300 minutes (5 hours)
+Group.msgTtl = 480
+Group.nrofHosts = 25
+
+# group1 (pedestrians) specific settings
+Group1.groupID = p
+Group1.nrofHosts = 30
+
+# group2 specific settings
+Group2.groupID = c
+# cars can drive only on roads
+Group2.okMaps = 1
+# 10-50 km/h
+Group2.speed = 2.7, 13.
+
+
+# another group of pedestrians
+Group3.groupID = w
+
+# The Tram groups
+Group4.groupID = t
+Group4.movementModel = MapRouteMovement
+Group4.routeFile = data/tram3.wkt
+Group4.routeType = 1
+Group4.waitTime = 10, 30
+Group4.speed = 7, 10
+Group4.nrofHosts = 7
+Group4.nrofInterfaces = 2
+Group4.interface1 = btInterface
+Group4.interface2 = highspeedInterface
+
+Group5.groupID = t
+Group5.movementModel = MapRouteMovement
+Group5.routeFile = data/tram4.wkt
+Group5.routeType = 2
+Group5.waitTime = 10, 30
+Group5.speed = 7, 10
+Group5.nrofHosts = 7
+
+Group6.groupID = t
+Group6.movementModel = MapRouteMovement
+Group6.routeFile = data/tram10.wkt
+Group6.routeType = 2
+Group6.waitTime = 10, 30
+Group6.speed = 7, 10
+Group6.nrofHosts = 6
+
+Group7.groupID = m_s
+Group7.nrofHosts = 20
+
+Group8.groupID = m_f
+Group8.nrofHosts = 20
+
+Group9.groupID = f
+Group9.nrofHosts = 10
+
+## Message creation parameters 
+Events.nrof = 1
+Events1.class = MessageEventGenerator
+Events1.interval = 25,120
+Events1.size = 50k,1M
+# range of message source/destination addresses
+Events1.hosts = 0,100
+Events1.tohosts = 0,100
+# Message ID prefix
+Events1.prefix = M
+
+
+## Movement model settings
+# seed for movement models' pseudo random number generator (default = 0)
+MovementModel.rngSeed = 1
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 4500, 3400
+# How long time to move hosts in the world before real simulation
+MovementModel.warmup = 1000
+
+## Map based movement -movement model specific settings
+MapBasedMovement.nrofMapFiles = 4
+
+MapBasedMovement.mapFile1 = data/roads.wkt
+MapBasedMovement.mapFile2 = data/main_roads.wkt
+MapBasedMovement.mapFile3 = data/pedestrian_paths.wkt
+MapBasedMovement.mapFile4 = data/shops.wkt
+
+## Reports - all report names have to be valid report classes
+
+Report.nrofReports = 8
+Report.warmup = 0
+Report.reportDir = reports/20000/0_50
+Report.report1 = MessageStatsReport
+Report.report2 = EventLogReport
+Report.report3 = CreatedMessagesReport
+Report.report4 = MaliciousDetectDataReport
+Report.report5 = DeliveryProbReport
+Report.report6 = MalnodeReport
+Report.report7 = MalOverheadReport
+Report.report8 = AllMaliciousNodesReport
+
+
+## Default settings for some routers settings
+ProphetRouter.secondsInTimeUnit = 30
+SprayAndWaitRouter.nrofCopies = 6
+SprayAndWaitRouter.binaryMode = true
+DecisionEngineRouter.decisionEngine = decisionengine.SnFDecisionEngine
+DecisionEngineRouter.nrofCopies = 3
+DecisionEngineRouter.binaryMode = true
+
+## Optimization settings -- these affect the speed of the simulation
+## see World class for details.
+Optimization.cellSizeMult = 5
+Optimization.randomizeUpdateOrder = true
+
+
+## GUI settings
+
+# GUI underlay image settings
+GUI.UnderlayImage.fileName = data/helsinki_underlay.png
+# Image offset in pixels (x, y)
+GUI.UnderlayImage.offset = 64, 20
+# Scaling factor for the image
+GUI.UnderlayImage.scale = 4.75
+# Image rotation (radians)
+GUI.UnderlayImage.rotate = -0.015
+
+# how many events to show in the log panel (default = 30)
+GUI.EventLogPanel.nrofEvents = 100
+# Regular Expression log filter (see Pattern-class from the Java API for RE-matching details)
+#GUI.EventLogPanel.REfilter = .*p[1-9]<->p[1-9]$
