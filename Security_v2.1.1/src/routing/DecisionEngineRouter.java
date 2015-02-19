@@ -451,8 +451,9 @@ public class DecisionEngineRouter extends ActiveRouter
 						host1.LER.put(local_host,block);
 						otherHost.connected_nodes[z].modmalicious=1;
 						if(!from.detectedNodes.contains(otherHost.connected_nodes[z])){
-							//System.out.println("IF "+local_T+" "+bum_block+" "+block);	
-							from.detectedNodes.add(otherHost.connected_nodes[z]);
+							//System.out.println("IF "+local_T+" "+bum_block+" "+block);
+                                                    if(MaliciousDecisionEngine.DecideMaliciousness(DTNHost.malPercentFocus))
+                                                        from.detectedNodes.add(otherHost.connected_nodes[z]);
 						}
 					}
 					else if(bum_block<block){
@@ -461,7 +462,8 @@ public class DecisionEngineRouter extends ActiveRouter
 						otherHost.modmalicious=1;
 						if(!from.detectedNodes.contains(otherHost)){
 							//System.out.println("Else IF "+local_host+" "+bum_block+" "+block);
-							from.detectedNodes.add(otherHost);
+                                                    if(MaliciousDecisionEngine.DecideMaliciousness(DTNHost.malPercentFocus))
+                                                        from.detectedNodes.add(otherHost);
 														
 						}
 					}
@@ -474,8 +476,7 @@ public class DecisionEngineRouter extends ActiveRouter
 					otherHost.msg_overhead++;
 					//System.out.println(SimClock.getTime() + "\t"+ otherHost.msg_overhead + "\tContact Info Transfer between\t" + from.toString() + " " + otherHost.toString());
 					
-					if(otherHost.malnode_focus==1 &&
-                                                    MaliciousDecisionEngine.DecideMaliciousness(0.0)){
+					if(otherHost.malnode_focus==1){
 						tau_vector.addEdge(otherHost.toString(),otherHost.connected_nodes[i].toString(),
 									otherHost.tau_utl[otherHost.connected_nodes[i].nodenumber]);
 					}
@@ -568,8 +569,7 @@ public class DecisionEngineRouter extends ActiveRouter
 							block = host1.LER.get(ij);
 				
 							if(blocker_ut!=0){
-								if(MaliciousDecisionEngine.DecideMaliciousness(0.0) && 
-                                                                        allNodes.get(i).malnode_focus == 1){
+								if(allNodes.get(i).malnode_focus == 1){
 									dec_tau = (thistime-blocker_time)+tau_vector.get_t(tmp_host1,tmp_host2) - 1;
 									//System.out.println("\t\t\t\tMalicious" + allNodes.get(i).toString() + " " + dec_tau);
 								}
@@ -595,22 +595,6 @@ public class DecisionEngineRouter extends ActiveRouter
 							otherHost.modmalicious=1;
 							if(allNodes.get(i).ferry != 1 && dec_tau!=0){
 								if(!from.detectedNodes.contains(allNodes.get(i))){
-									/*
-									if(allNodes.get(i).toString().startsWith("c8") || allNodes.get(i).toString().startsWith("c6") || allNodes.get(i).toString().startsWith("t19") || allNodes.get(i).toString().startsWith("p0") || allNodes.get(i).toString().startsWith("m_f54") || allNodes.get(i).toString().startsWith("c7")){
-										
-										System.out.println(allNodes.get(i).toString() 
-															+ " " + f_tau_calc 
-															+ " " + dec_tau
-															+ " " + blocker_time
-															+ " " + tau_vector.get_t(tmp_host1,tmp_host2)
-															+ " " + thistime
-															+ " " + blockest_ut
-															+ " " + blockest_time
-															);
-									}
-									System.out.println(allNodes.get(i).toString() + " is malicious");
-									*/
-									//from.detectedNodes.add(allNodes.get(i));
 								}
 							}
 						}

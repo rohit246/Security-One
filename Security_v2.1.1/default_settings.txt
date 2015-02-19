@@ -24,7 +24,8 @@ Scenario.nrofHostGroups = 9
 Group.ferry_tag = f
 Group.focus_tag = m_f
 Group.spray_tag = m_s
-Group.malicious_percent = 0.0
+Group.malicious_percent_spray = 0.5
+Group.malicious_percent_focus = 0.0
 #ExternalMovement.file = External_Movement_new.txt
 ########################################################
 
@@ -126,7 +127,7 @@ MapBasedMovement.mapFile4 = data/shops.wkt
 
 Report.nrofReports = 8
 Report.warmup = 0
-Report.reportDir = reports/20000/Spray/Test1
+Report.reportDir = reports/20000/0_50
 Report.report1 = MessageStatsReport
 Report.report2 = EventLogReport
 Report.report3 = CreatedMessagesReport
